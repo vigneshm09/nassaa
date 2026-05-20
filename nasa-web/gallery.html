@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Photo gallery of NASSAA UTH HUB — see the action, energy and vibes across our 3 Chennai branches. VR, Bowling, Laser Tag, Arcade & more.">
+ <meta name="theme-color" content="#FF5500">
+
+ <meta property="og:title" content="Gallery | NASSAA UTH HUB">
+ <meta property="og:description" content="Real moments, real fun — browse photos from our Besant Nagar, ECR and Marina Mall branches.">
+ <meta property="og:type" content="website">
+
+ <title>Gallery | NASSAA UTH HUB</title>
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+ <!-- =============================================
+ NAVIGATION
+ ============================================= -->
+ <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+ <div class="nav__container">
+
+ <a href="index.html" class="nav__logo" aria-label="NASSAA UTH HUB Home">
+ <img src="assets/images/logo.png" alt="NASSAA UTH HUB" class="nav__logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+ <span class="nav__logo-fallback" style="display:none;flex-direction:column;gap:2px;">
+ <span class="nav__logo-text">NASSAA</span>
+ <span class="nav__logo-sub">UTH HUB</span>
+ </span>
+ </a>
+
+ <div class="nav__menu" id="navMenu">
+ <ul class="nav__list" role="menubar">
+ <li class="nav__item" role="none"><a href="index.html" class="nav__link" role="menuitem">Home</a></li>
+ <li class="nav__item" role="none"><a href="games.html" class="nav__link" role="menuitem">Our Games</a></li>
+ <li class="nav__item" role="none"><a href="about.html" class="nav__link" role="menuitem">About Us</a></li>
+ <li class="nav__item" role="none"><a href="reviews.html" class="nav__link" role="menuitem">Reviews</a></li>
+ <li class="nav__item" role="none"><a href="gallery.html" class="nav__link active" role="menuitem">Gallery</a></li>
+ <li class="nav__item" role="none"><a href="contact.html" class="nav__link" role="menuitem">Contact Us</a></li>
+ </ul>
+ <a href="contact.html" class="btn btn--primary nav__cta">Book Now</a>
+ </div>
+
+ <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+ <span class="nav__toggle-bar"></span>
+ <span class="nav__toggle-bar"></span>
+ <span class="nav__toggle-bar"></span>
+ </button>
+
+ </div>
+ </nav>
+
+ <!-- =============================================
+ PAGE HERO
+ ============================================= -->
+ <section class="page-hero" aria-label="Gallery page header">
+ <div class="page-hero__bg" aria-hidden="true"></div>
+ <div class="page-hero__glow" aria-hidden="true"></div>
+
+ <div class="container page-hero__inner">
+ <nav class="page-breadcrumb" aria-label="Breadcrumb">
+ <a href="index.html">Home</a>
+ <span class="page-breadcrumb__sep" aria-hidden="true">/</span>
+ <span class="page-breadcrumb__current" aria-current="page">Gallery</span>
+ </nav>
+
+ <div class="page-hero__tag section__tag">📸 Take a Tour</div>
+ <h1 class="page-hero__title">
+ Step Inside <span>NASSAA</span>
+ </h1>
+ <p class="page-hero__subtitle">
+ Flip through our world — swipe the cards and see what's waiting for you across VR, Bowling, Arcade, Laser Tag and more.
+ </p>
+
+            <div class="page-hero__meta">
+                <div class="page-hero__meta-item">
+                    <span aria-hidden="true">📍</span>
+                    <span><strong>3 Branches</strong> · Chennai</span>
+                </div>
+                <div class="page-hero__meta-item">
+                    <span aria-hidden="true">🎮</span>
+                    <span><strong>15+</strong> Activities</span>
+                </div>
+                <div class="page-hero__meta-item">
+                    <span aria-hidden="true">✨</span>
+                    <span><strong>Real Moments</strong> from Every Branch</span>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+
+ <!-- =============================================
+ 3D CYLINDRICAL GALLERY
+ ============================================= -->
+ <section class="sphere-section" aria-label="3D Interactive Gallery">
+  <div class="container">
+   <div class="sphere-section__header" data-anim="fade-up">
+    <h2 class="section__title">Every Card, a <span>Memory</span></h2>
+   </div>
+  </div>
+
+  <div class="sphere-scene" id="cylinderStage">
+   <div class="sphere-ring" id="cylinderRing">
+
+    <div class="sphere-card" data-label="VR Arena">
+     <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=640&h=960&fit=crop&auto=format" alt="VR Arena" style="width:100%;height:100%;object-fit:cover;pointer-events:none;">
+    </div>
+
+    <div class="sphere-card" data-label="Arcade Zone">
+     <img src="https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=640&h=960&fit=crop&auto=format" alt="Arcade Zone" style="width:100%;height:100%;object-fit:cover;pointer-events:none;">
+    </div>
+
+    <div class="sphere-card" data-label="Birthday Party">
+     <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=640&h=960&fit=crop&auto=format" alt="Birthday Party" style="width:100%;height:100%;object-fit:cover;pointer-events:none;">
+    </div>
+
+    <div class="sphere-card" data-label="Bowling Lanes">
+     <img src="https://images.unsplash.com/photo-1511974035430-5de47d3b95da?w=640&h=960&fit=crop&auto=format" alt="Bowling Lanes" style="width:100%;height:100%;object-fit:cover;pointer-events:none;">
+    </div>
+
+    <div class="sphere-card" data-label="Laser Tag">
+     <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=640&h=960&fit=crop&auto=format" alt="Laser Tag" style="width:100%;height:100%;object-fit:cover;pointer-events:none;">
+    </div>
+
+    <div class="sphere-card" data-label="Group Hangout">
+     <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=640&h=960&fit=crop&auto=format" alt="Group Hangout" style="width:100%;height:100%;object-fit:cover;pointer-events:none;">
+    </div>
+
+    <div class="sphere-card" data-label="PC Gaming Zone">
+     <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=640&h=960&fit=crop&auto=format" alt="PC Gaming Zone" style="width:100%;height:100%;object-fit:cover;pointer-events:none;">
+    </div>
+
+    <div class="sphere-card" data-label="Escape Room">
+     <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=640&h=960&fit=crop&auto=format" alt="Escape Room" style="width:100%;height:100%;object-fit:cover;pointer-events:none;">
+    </div>
+
+    <div class="sphere-card" data-label="PS5 Gaming">
+     <img src="https://images.unsplash.com/photo-1621259182978-fbf93132d53d?w=640&h=960&fit=crop&auto=format" alt="PS5 Gaming" style="width:100%;height:100%;object-fit:cover;pointer-events:none;">
+    </div>
+
+    <div class="sphere-card" data-label="Laser Maze">
+     <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=640&h=960&fit=crop&auto=format" alt="Laser Maze" style="width:100%;height:100%;object-fit:cover;pointer-events:none;">
+    </div>
+
+    <div class="sphere-card" data-label="Snooker">
+     <img src="https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=640&h=960&fit=crop&auto=format" alt="Snooker" style="width:100%;height:100%;object-fit:cover;pointer-events:none;">
+    </div>
+
+    <div class="sphere-card" data-label="Floor is Lava">
+     <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=640&h=960&fit=crop&auto=format" alt="Floor is Lava" style="width:100%;height:100%;object-fit:cover;pointer-events:none;">
+    </div>
+
+    <div class="sphere-card" data-label="Gaming Lounge">
+     <img src="https://images.unsplash.com/photo-1542751110-97427bbecfd8?w=640&h=960&fit=crop&auto=format" alt="Gaming Lounge" style="width:100%;height:100%;object-fit:cover;pointer-events:none;">
+    </div>
+
+    <div class="sphere-card" data-label="Family Fun">
+     <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?w=640&h=960&fit=crop&auto=format" alt="Family Fun" style="width:100%;height:100%;object-fit:cover;pointer-events:none;">
+    </div>
+
+    <div class="sphere-card" data-label="Night Gaming">
+     <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=640&h=960&fit=crop&auto=format" alt="Night Gaming" style="width:100%;height:100%;object-fit:cover;pointer-events:none;">
+    </div>
+
+   </div>
+  </div>
+
+  <div class="fan-footer">
+   <p class="fan-caption" id="fanCaption">VR Arena</p>
+  </div>
+
+ </section>
+
+ <!-- =============================================
+ GALLERY SECTION (hidden — replaced by coverflow above)
+ ============================================= -->
+ <section class="gallery-page section" id="gallery" aria-label="Photo gallery" style="display:none;">
+ <div class="container">
+
+ <!-- Filter tabs -->
+ <div class="gallery-filter" role="group" aria-label="Filter gallery by branch" data-anim="fade-up">
+ <button class="gallery-filter-btn active" data-filter="all">All Branches</button>
+ <button class="gallery-filter-btn" data-filter="besant-nagar">Besant Nagar</button>
+ <button class="gallery-filter-btn" data-filter="ecr">ECR</button>
+ <button class="gallery-filter-btn" data-filter="marina-mall">Marina Mall</button>
+ <button class="gallery-filter-btn" data-filter="vr">VR</button>
+ <button class="gallery-filter-btn" data-filter="bowling">Bowling</button>
+ <button class="gallery-filter-btn" data-filter="arcade">Arcade</button>
+ <button class="gallery-filter-btn" data-filter="events">Events</button>
+ </div>
+
+ <!-- Coming Soon Banner -->
+ <div class="gallery-coming-soon" data-anim="fade-up">
+ <span class="gallery-coming-soon__icon">📸</span>
+ <h2 class="gallery-coming-soon__title">Photos Coming Soon!</h2>
+ <p class="gallery-coming-soon__text">
+ We're capturing all the epic moments at NASSAA UTH HUB. Our gallery will be live with stunning shots from all three branches very soon. Follow us on 📸 Instagram for sneak peeks!
+ </p>
+ <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+ <a href="https://www.instagram.com/nassaa.in/" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+ Follow on 📸 Instagram
+ </a>
+ <a href="contact.html" class="btn btn--outline">Visit a Branch</a>
+ </div>
+ </div>
+
+ <!-- Gallery Grid (placeholder items — replace img src when ready) -->
+ <div class="gallery-grid" id="galleryGrid" aria-label="Photo gallery grid">
+
+ <!-- Besant Nagar photos -->
+ <div class="gallery-item" data-branch="besant-nagar" data-category="vr" data-caption="VR Arena — Besant Nagar" tabindex="0" role="button" aria-label="Open photo: VR Arena Besant Nagar">
+ <!-- Replace src below with your actual image path -->
+ <img data-src="assets/images/gallery/bn-vr-01.jpg"
+ src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3C/svg%3E"
+ alt="VR Arena at Besant Nagar branch"
+ loading="lazy">
+ <div class="gallery-placeholder" style="min-height:280px;">
+ <span class="gallery-placeholder-icon">🧠</span>
+ <span class="gallery-placeholder-text">VR Arena</span>
+ </div>
+ <div class="gallery-item__overlay">
+ <span class="gallery-item__caption">VR Arena</span>
+ <span class="gallery-item__tag">Besant Nagar</span>
+ </div>
+ <span class="gallery-item__expand" aria-hidden="true">⤢</span>
+ </div>
+
+ <div class="gallery-item" data-branch="besant-nagar" data-category="bowling" data-caption="Bowling Lanes — Besant Nagar" tabindex="0" role="button" aria-label="Open photo: Bowling Lanes Besant Nagar">
+ <img data-src="assets/images/gallery/bn-bowling-01.jpg"
+ src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+ alt="Bowling lanes at Besant Nagar" loading="lazy">
+ <div class="gallery-placeholder" style="min-height:220px;">
+ <span class="gallery-placeholder-icon">🎳</span>
+ <span class="gallery-placeholder-text">Bowling Lanes</span>
+ </div>
+ <div class="gallery-item__overlay">
+ <span class="gallery-item__caption">Bowling Lanes</span>
+ <span class="gallery-item__tag">Besant Nagar</span>
+ </div>
+ <span class="gallery-item__expand" aria-hidden="true">⤢</span>
+ </div>
+
+ <div class="gallery-item" data-branch="ecr" data-category="arcade" data-caption="Arcade Zone — ECR" tabindex="0" role="button" aria-label="Open photo: Arcade Zone ECR">
+ <img data-src="assets/images/gallery/ecr-arcade-01.jpg"
+ src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 700'%3E%3C/svg%3E"
+ alt="Arcade zone at ECR branch" loading="lazy">
+ <div class="gallery-placeholder" style="min-height:300px;">
+ <span class="gallery-placeholder-icon">🕹️</span>
+ <span class="gallery-placeholder-text">Arcade Zone</span>
+ </div>
+ <div class="gallery-item__overlay">
+ <span class="gallery-item__caption">Arcade Zone</span>
+ <span class="gallery-item__tag">ECR</span>
+ </div>
+ <span class="gallery-item__expand" aria-hidden="true">⤢</span>
+ </div>
+
+ <div class="gallery-item" data-branch="marina-mall" data-category="bowling" data-caption="Premium Bowling — Marina Mall" tabindex="0" role="button" aria-label="Open photo: Bowling Marina Mall">
+ <img data-src="assets/images/gallery/mm-bowling-01.jpg"
+ src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 540'%3E%3C/svg%3E"
+ alt="Bowling at Marina Mall branch" loading="lazy">
+ <div class="gallery-placeholder" style="min-height:240px;">
+ <span class="gallery-placeholder-icon">🎳</span>
+ <span class="gallery-placeholder-text">Marina Bowling</span>
+ </div>
+ <div class="gallery-item__overlay">
+ <span class="gallery-item__caption">Premium Bowling</span>
+ <span class="gallery-item__tag">Marina Mall</span>
+ </div>
+ <span class="gallery-item__expand" aria-hidden="true">⤢</span>
+ </div>
+
+ <div class="gallery-item" data-branch="besant-nagar" data-category="events" data-caption="Birthday Party — Besant Nagar" tabindex="0" role="button" aria-label="Open photo: Birthday Party Besant Nagar">
+ <img data-src="assets/images/gallery/bn-event-01.jpg"
+ src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3C/svg%3E"
+ alt="Birthday party event at Besant Nagar" loading="lazy">
+ <div class="gallery-placeholder" style="min-height:260px;">
+ <span class="gallery-placeholder-icon">🎉</span>
+ <span class="gallery-placeholder-text">Birthday Party</span>
+ </div>
+ <div class="gallery-item__overlay">
+ <span class="gallery-item__caption">Birthday Party</span>
+ <span class="gallery-item__tag">Besant Nagar · Events</span>
+ </div>
+ <span class="gallery-item__expand" aria-hidden="true">⤢</span>
+ </div>
+
+ <div class="gallery-item" data-branch="ecr" data-category="vr" data-caption="VR Quest — ECR" tabindex="0" role="button" aria-label="Open photo: VR Quest ECR">
+ <img data-src="assets/images/gallery/ecr-vr-01.jpg"
+ src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 480'%3E%3C/svg%3E"
+ alt="VR Quest at ECR branch" loading="lazy">
+ <div class="gallery-placeholder" style="min-height:200px;">
+ <span class="gallery-placeholder-icon">🔫</span>
+ <span class="gallery-placeholder-text">VR Quest</span>
+ </div>
+ <div class="gallery-item__overlay">
+ <span class="gallery-item__caption">VR Quest</span>
+ <span class="gallery-item__tag">ECR</span>
+ </div>
+ <span class="gallery-item__expand" aria-hidden="true">⤢</span>
+ </div>
+
+ <div class="gallery-item" data-branch="besant-nagar" data-category="arcade" data-caption="Laser Tag Arena — Besant Nagar" tabindex="0" role="button" aria-label="Open photo: Laser Tag Besant Nagar">
+ <img data-src="assets/images/gallery/bn-laser-01.jpg"
+ src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 640'%3E%3C/svg%3E"
+ alt="Laser tag arena at Besant Nagar" loading="lazy">
+ <div class="gallery-placeholder" style="min-height:280px;">
+ <span class="gallery-placeholder-icon">🗝️</span>
+ <span class="gallery-placeholder-text">Laser Tag</span>
+ </div>
+ <div class="gallery-item__overlay">
+ <span class="gallery-item__caption">Laser Tag Arena</span>
+ <span class="gallery-item__tag">Besant Nagar</span>
+ </div>
+ <span class="gallery-item__expand" aria-hidden="true">⤢</span>
+ </div>
+
+ <div class="gallery-item" data-branch="marina-mall" data-category="events" data-caption="Group Event — Marina Mall" tabindex="0" role="button" aria-label="Open photo: Group Event Marina Mall">
+ <img data-src="assets/images/gallery/mm-event-01.jpg"
+ src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 520'%3E%3C/svg%3E"
+ alt="Group event at Marina Mall" loading="lazy">
+ <div class="gallery-placeholder" style="min-height:230px;">
+ <span class="gallery-placeholder-icon">🖥️</span>
+ <span class="gallery-placeholder-text">Group Event</span>
+ </div>
+ <div class="gallery-item__overlay">
+ <span class="gallery-item__caption">Group Event</span>
+ <span class="gallery-item__tag">Marina Mall</span>
+ </div>
+ <span class="gallery-item__expand" aria-hidden="true">⤢</span>
+ </div>
+
+ <div class="gallery-item" data-branch="ecr" data-category="events" data-caption="Escape Room Adventure — ECR" tabindex="0" role="button" aria-label="Open photo: Escape Room ECR">
+ <img data-src="assets/images/gallery/ecr-escape-01.jpg"
+ src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 580'%3E%3C/svg%3E"
+ alt="Escape room at ECR branch" loading="lazy">
+ <div class="gallery-placeholder" style="min-height:260px;">
+ <span class="gallery-placeholder-icon">🏆</span>
+ <span class="gallery-placeholder-text">Escape Room</span>
+ </div>
+ <div class="gallery-item__overlay">
+ <span class="gallery-item__caption">Escape Room</span>
+ <span class="gallery-item__tag">ECR</span>
+ </div>
+ <span class="gallery-item__expand" aria-hidden="true">⤢</span>
+ </div>
+
+ </div>
+ <!-- /.gallery-grid -->
+
+ </div>
+ </section>
+
+ <!-- =============================================
+ SOCIAL CTA
+ ============================================= -->
+ <section class="cta-banner" aria-label="Follow us on social media">
+ <div class="cta-banner__glow" aria-hidden="true"></div>
+ <div class="container">
+ <div class="cta-banner__content" data-anim="fade-up">
+ <h2 class="cta-banner__title">Follow the Fun!</h2>
+ <p class="cta-banner__sub">Tag us in your shots — @nassaa.in — and we'll feature the best ones right here.</p>
+ <div class="cta-banner__btns">
+ <a href="https://www.instagram.com/nassaa.in/" target="_blank" rel="noopener noreferrer" class="btn btn--white btn--lg">
+ 📸 Instagram
+ </a>
+ <a href="https://www.facebook.com/nassaayouthhub.offl/" target="_blank" rel="noopener noreferrer" class="btn btn--outline-white btn--lg">
+ Facebook
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- =============================================
+ FOOTER
+ ============================================= -->
+ <footer class="footer" role="contentinfo">
+ <div class="container">
+ <div class="footer__grid">
+
+ <div class="footer__brand">
+ <a href="index.html" class="footer__logo-wrap" aria-label="NASSAA UTH HUB">
+ <img src="assets/images/logo.png" alt="NASSAA UTH HUB" class="footer__logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block';this.nextElementSibling.nextElementSibling.style.display='block'">
+ <span class="footer__logo-text" style="display:none;">NASSAA</span>
+ <span class="footer__logo-sub" style="display:none;">UTH HUB</span>
+ </a>
+ <p class="footer__tagline">World's First Youth Entertainment Center</p>
+ <p class="footer__desc">Experience the ultimate gaming adventure across our three exciting branches in Chennai. Fun for all ages, any time.</p>
+ <nav class="footer__social" aria-label="Social media links">
+ <a href="https://www.instagram.com/nassaa.in/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+ <a href="https://www.facebook.com/nassaayouthhub.offl/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+ <a href="https://www.youtube.com/c/NassaaUthHub/featured" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a>
+ <a href="https://wa.me/919789029700" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+ </nav>
+ </div>
+
+ <div>
+ <h3 class="footer__col-title">Quick Links</h3>
+ <ul class="footer__nav-list">
+ <li><a href="index.html">Home</a></li>
+ <li><a href="games.html">Our Games</a></li>
+ <li><a href="about.html">About Us</a></li>
+ <li><a href="reviews.html">Reviews</a></li>
+ <li><a href="gallery.html">Gallery</a></li>
+ <li><a href="contact.html">Contact Us</a></li>
+ </ul>
+ </div>
+
+ <div>
+ <h3 class="footer__col-title">Our Branches</h3>
+ <ul class="footer__nav-list">
+ <li><a href="contact.html#besant-nagar">Besant Nagar</a></li>
+ <li><a href="contact.html#marina-mall">Marina Mall</a></li>
+ <li><a href="contact.html#ecr">ECR</a></li>
+ </ul>
+ </div>
+
+ <div>
+ <h3 class="footer__col-title">Contact Us</h3>
+ <address style="font-style:normal;">
+                        <div class="footer__contact-item">
+                            <span class="footer__contact-icon" aria-hidden="true">📞</span>
+                            <div>
+                                <p>Besant Nagar: <a href="tel:+919456789800">+91 94567 89800</a></p>
+                                <p>Marina Mall: <a href="tel:+919456789400">+91 94567 89400</a></p>
+                                <p>ECR: <a href="tel:+919456789200">+91 94567 89200</a></p>
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <span class="footer__contact-icon" aria-hidden="true">✉️</span>
+                            <a href="mailto:nassaauthhub@gmail.com">nassaauthhub@gmail.com</a>
+                        </div>
+                        <div class="footer__contact-item">
+                            <span class="footer__contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></span>
+                            <a href="https://wa.me/919789029700" target="_blank" rel="noopener noreferrer">WhatsApp: +91 97890 29700</a>
+                        </div>
+                 </address>
+ </div>
+
+ </div>
+
+ <div class="footer__bottom">
+ <p>&copy; 2025 NASSAA UTH HUB. All rights reserved.</p>
+ <p>Crafted with ❤️ for Chennai's gaming community.</p>
+ </div>
+ </div>
+ </footer>
+
+ <!-- Floating WhatsApp -->
+ <a href="https://wa.me/919789029700"
+ target="_blank"
+ rel="noopener noreferrer"
+ class="whatsapp-float"
+ aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+
+ <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">&#8593;</button>
+
+ <script src="assets/js/gsap.min.js"></script>
+ <script src="assets/js/ScrollTrigger.min.js"></script>
+ <script src="assets/js/main.js"></script>
+ <script src="assets/js/gsap-animations.js"></script>
+
+ <!-- =============================================
+ GALLERY PAGE SCRIPTS
+ ============================================= -->
+ <script>
+ 'use strict';
+
+
+ /* ---- 3D Cylindrical Carousel ---- */
+ (function init3DCarousel() {
+    const scene = document.getElementById('cylinderStage');
+    const ring = document.getElementById('cylinderRing');
+    const caption = document.getElementById('fanCaption');
+    if (!ring || typeof gsap === 'undefined') return;
+
+    const cards = Array.from(ring.querySelectorAll('.sphere-card'));
+    const total = cards.length;
+    if (!total) return;
+
+    let radius = 0;
+    const angleStep = 360 / total;
+
+    function setupCards() {
+        const cardWidth = cards[0].offsetWidth;
+        // Calculate radius to fit all cards in a circle with some padding
+        // Increased padding from 60 to 120 to push images further back for caption visibility
+        radius = Math.round( (cardWidth / 2) / Math.tan(Math.PI / total) ) + 120;
+        
+        cards.forEach((card, i) => {
+            const angle = i * angleStep;
+            card.style.transform = `rotateY(${angle}deg) translateZ(${radius}px)`;
+        });
+    }
+    setupCards();
+    window.addEventListener('resize', setupCards);
+
+    let currentAngle = 0;
+    let targetAngle = 0;
+    let isDragging = false;
+    let startX = 0;
+    let lastX = 0;
+    let autoRotate = true;
+    let currentLabel = caption ? caption.textContent : '';
+
+    // Auto rotation & Lerp loop
+    gsap.ticker.add(() => {
+        if (autoRotate && !isDragging) {
+            targetAngle -= 0.05; // Considerably slower spin speed
+        }
+        
+        // Smooth lerp for momentum
+        currentAngle += (targetAngle - currentAngle) * 0.08;
+        ring.style.transform = `rotateY(${currentAngle}deg)`;
+
+        // Update active caption based on rotation
+        const normalizedAngle = ((currentAngle % 360) + 360) % 360;
+        const activeIndex = Math.round(normalizedAngle / angleStep) % total;
+        // The card facing the camera is at angle 0. But wait, if ring rotates negative, 
+        // the front card is the one with positive angle matching the ring's negative rotation.
+        // Let's just find the card closest to face-front:
+        let closestIndex = Math.round(-currentAngle / angleStep) % total;
+        if (closestIndex < 0) closestIndex += total;
+        
+        const newLabel = cards[closestIndex] ? cards[closestIndex].dataset.label || '' : '';
+        if (caption && currentLabel !== newLabel) {
+            currentLabel = newLabel;
+            gsap.killTweensOf(caption);
+            gsap.to(caption, {
+                opacity: 0,
+                y: 10,
+                duration: 0.15,
+                ease: 'power2.in',
+                onComplete: () => {
+                    caption.textContent = currentLabel;
+                    gsap.to(caption, { opacity: 1, y: 0, duration: 0.2, ease: 'power2.out' });
+                }
+            });
+        }
+    });
+
+    // Drag interactions
+    scene.addEventListener('mousedown', dragStart);
+    scene.addEventListener('touchstart', dragStart, { passive: true });
+    
+    window.addEventListener('mousemove', dragMove);
+    window.addEventListener('touchmove', dragMove, { passive: false });
+    
+    window.addEventListener('mouseup', dragEnd);
+    window.addEventListener('touchend', dragEnd);
+    window.addEventListener('mouseleave', dragEnd);
+
+    function dragStart(e) {
+        isDragging = true;
+        autoRotate = false;
+        startX = e.clientX || e.touches[0].clientX;
+        lastX = startX;
+        scene.style.cursor = 'grabbing';
+    }
+
+    function dragMove(e) {
+        if (!isDragging) return;
+        
+        // Prevent scrolling while dragging carousel on mobile
+        if (e.cancelable) e.preventDefault();
+        
+        const x = e.clientX || (e.touches && e.touches[0].clientX);
+        if (x === undefined) return;
+        
+        const deltaX = x - lastX;
+        lastX = x;
+        
+        // Adjust sensitivity
+        const sensitivity = 360 / window.innerWidth;
+        targetAngle += deltaX * sensitivity * 1.8;
+    }
+
+    function dragEnd() {
+        if (!isDragging) return;
+        isDragging = false;
+        scene.style.cursor = 'grab';
+        
+        // Resume auto rotation after 2.5s
+        setTimeout(() => { if (!isDragging) autoRotate = true; }, 2500);
+    }
+ })();
+
+ /* ---- Gallery Filter ---- */
+ (function initGalleryFilter() {
+ const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+ const items = document.querySelectorAll('.gallery-item');
+ if (!filterBtns.length) return;
+
+ filterBtns.forEach(btn => {
+ btn.addEventListener('click', () => {
+ const filter = btn.dataset.filter;
+
+ filterBtns.forEach(b => b.classList.remove('active'));
+ btn.classList.add('active');
+
+ items.forEach(item => {
+ const branch = item.dataset.branch || '';
+ const category = item.dataset.category || '';
+ const match = filter === 'all' || branch === filter || category === filter;
+
+ item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+ if (match) {
+ item.style.opacity = '1';
+ item.style.transform = 'scale(1)';
+ item.style.display = '';
+ } else {
+ item.style.opacity = '0';
+ item.style.transform = 'scale(0.95)';
+ setTimeout(() => {
+ if (item.style.opacity === '0') item.style.display = 'none';
+ }, 300);
+ }
+ });
+ });
+ });
+ })();
+
+ /* ---- Lightbox ---- */
+ (function initLightbox() {
+ const items = document.querySelectorAll('.gallery-item, .sphere-card');
+ if (!items.length) return;
+
+ /* Build lightbox DOM */
+ const lb = document.createElement('div');
+ lb.className = 'lightbox';
+ lb.setAttribute('role', 'dialog');
+ lb.setAttribute('aria-modal', 'true');
+ lb.setAttribute('aria-label', 'Photo lightbox');
+ lb.innerHTML = `
+ <button class="lightbox__close" aria-label="Close lightbox">&#x2715;</button>
+ <button class="lightbox__nav lightbox__prev" aria-label="Previous photo">&#8592;</button>
+ <div class="lightbox__inner">
+ <img class="lightbox__img" src="" alt="">
+ <p class="lightbox__caption"></p>
+ </div>
+ <button class="lightbox__nav lightbox__next" aria-label="Next photo">&#8594;</button>
+ `;
+ document.body.appendChild(lb);
+
+ const lbImg = lb.querySelector('.lightbox__img');
+ const lbCaption = lb.querySelector('.lightbox__caption');
+ const lbClose = lb.querySelector('.lightbox__close');
+ const lbPrev = lb.querySelector('.lightbox__prev');
+ const lbNext = lb.querySelector('.lightbox__next');
+
+ let currentIndex = 0;
+ let visibleItems = Array.from(items);
+
+ function openLightbox(index) {
+ visibleItems = Array.from(items).filter(i => i.style.display !== 'none');
+ currentIndex = Math.max(0, Math.min(index, visibleItems.length - 1));
+ showImage(currentIndex);
+ lb.classList.add('open');
+ document.body.style.overflow = 'hidden';
+ lbClose.focus();
+ }
+
+ function closeLightbox() {
+ lb.classList.remove('open');
+ document.body.style.overflow = '';
+ }
+
+ function showImage(index) {
+ const item = visibleItems[index];
+ const img = item.querySelector('img');
+ const realSrc = img.dataset.src || img.src;
+ const caption = item.dataset.caption || item.dataset.label || '';
+ lbImg.src = realSrc;
+ lbImg.alt = img.alt || 'Gallery photo';
+ lbCaption.textContent = caption;
+ }
+
+ items.forEach((item, idx) => {
+ item.addEventListener('click', () => openLightbox(idx));
+ item.addEventListener('keydown', e => {
+ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(idx); }
+ });
+ });
+
+ lbClose.addEventListener('click', closeLightbox);
+ lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+
+ lbPrev.addEventListener('click', () => {
+ currentIndex = currentIndex > 0 ? currentIndex - 1 : visibleItems.length - 1;
+ showImage(currentIndex);
+ });
+ lbNext.addEventListener('click', () => {
+ currentIndex = currentIndex < visibleItems.length - 1 ? currentIndex + 1 : 0;
+ showImage(currentIndex);
+ });
+
+ document.addEventListener('keydown', e => {
+ if (!lb.classList.contains('open')) return;
+ if (e.key === 'Escape') closeLightbox();
+ if (e.key === 'ArrowLeft') { currentIndex = currentIndex > 0 ? currentIndex - 1 : visibleItems.length - 1; showImage(currentIndex); }
+ if (e.key === 'ArrowRight') { currentIndex = currentIndex < visibleItems.length - 1 ? currentIndex + 1 : 0; showImage(currentIndex); }
+ });
+ })();
+ </script>
+
+</body>
+</html>
