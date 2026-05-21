@@ -739,6 +739,7 @@ h1, h2, h3, h4, h5 {
     transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
     position: relative;
     overflow: hidden;
+    aspect-ratio: 9 / 16;
 }
 .game-card::before {
     content: '';
@@ -779,21 +780,29 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Cinematic Video Hover */
-.card-hover-video {
+.game-card > .card-hover-video,
+.activity-card > .card-hover-video {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    filter: brightness(0.55);
+    transition: filter 0.5s ease;
     z-index: 0;
     pointer-events: none;
-    mix-blend-mode: screen;
 }
-.game-card:hover .card-hover-video,
-.activity-card:hover .card-hover-video {
-    opacity: 0.25;
+.game-card:hover > .card-hover-video,
+.activity-card:hover > .card-hover-video {
+    filter: brightness(0.85);
+}
+.game-card__title,
+.game-card__desc,
+.game-card__cta,
+.activity-card__name,
+.activity-card__desc,
+.activity-card__link {
+    text-shadow: 0 2px 12px rgba(0,0,0,0.85);
 }
 
 .game-card__icon {
@@ -1593,6 +1602,7 @@ h1, h2, h3, h4, h5 {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    aspect-ratio: 9 / 16;
 }
 .activity-card::before {
     content: '';
