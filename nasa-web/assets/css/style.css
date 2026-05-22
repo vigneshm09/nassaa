@@ -2594,8 +2594,7 @@ textarea.form-control {
     .about-snippet__grid  { grid-template-columns: 1fr; gap: 40px; }
     .about-snippet__visual { order: -1; }
     .about-snippet__features { grid-template-columns: 1fr; }
-    .games-preview__grid  { grid-template-columns: 1fr; }
-    .branches__grid       { grid-template-columns: 1fr; }
+    .branches__grid       { grid-template-columns: repeat(2, 1fr); }
     .footer__grid         { grid-template-columns: 1fr; gap: 32px; }
     .footer__bottom       { flex-direction: column; gap: 8px; text-align: center; }
     .cta-banner__btns     { flex-direction: column; align-items: center; }
@@ -2613,19 +2612,55 @@ textarea.form-control {
 }
 
 /* =============================================
-   21. RESPONSIVE — SMALL (≤ 480px)
+   21. RESPONSIVE — LARGE MOBILE (≤ 640px)
+   ============================================= */
+@media (max-width: 640px) {
+    .games-preview__grid { grid-template-columns: 1fr; }
+    .activities-grid { grid-template-columns: 1fr; }
+    .branches__grid { grid-template-columns: 1fr; }
+
+    .game-card, .activity-card { aspect-ratio: auto; min-height: 280px; }
+    .game-card { padding: 26px 22px; }
+    .activity-card { padding: 22px 18px; }
+
+    .hero { min-height: auto; padding: 110px 0 60px; }
+    .hero__title { font-size: clamp(2.6rem, 8vw, 3.5rem); }
+    .hero__subtitle { font-size: 1rem; }
+    .hero__stats { width: 100%; padding: 16px 0; }
+    .hero__stat { padding: 0 18px; }
+    .hero__stat-number { font-size: 1.4rem; }
+
+    .section__title { font-size: clamp(2.2rem, 6vw, 3.2rem); }
+    .section__subtitle { font-size: 0.95rem; }
+
+    .page-hero__title { font-size: clamp(2rem, 8vw, 3rem); }
+    .page-hero__meta { flex-direction: column; gap: 8px; }
+
+    .game-card__title { font-size: 1.5rem; }
+    .game-card__desc { -webkit-line-clamp: 2; line-clamp: 2; }
+
+    .branch-header__addr { max-width: none; }
+    .branch-header__contact { overflow-wrap: break-word; word-break: break-word; }
+
+    .activity-card__icon { font-size: 2.2rem; }
+    .activity-card__name { font-size: 0.9rem; }
+
+    .nav__container { padding: 0 24px; }
+}
+
+/* =============================================
+   22. RESPONSIVE — SMALL (≤ 480px)
    ============================================= */
 @media (max-width: 480px) {
     .container { padding: 0 16px; }
     .why-us__grid { grid-template-columns: 1fr; }
-    .hero__stat-number { font-size: 1.5rem; }
-    .activities-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-    .activity-card { padding: 18px 14px; }
-
+    .hero__stat-number { font-size: 1.3rem; }
+    .activity-card { padding: 16px 12px; }
+    .hero__badge { font-size: 0.65rem; padding: 10px 16px; }
 }
 
 /* =============================================
-   22. HERO VIDEO BACKGROUND
+   23. HERO VIDEO BACKGROUND
    ============================================= */
 .hero__video-wrap {
     position: absolute;

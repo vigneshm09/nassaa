@@ -572,26 +572,6 @@ function initGlowTracking() {
 }
 
 /* =============================================
-   16. VIDEO HOVER PLAY/PAUSE
-   ============================================= */
-function initVideoHover() {
-    if (window.matchMedia('(pointer: coarse)').matches) return;
-
-    document.querySelectorAll('.game-card, .activity-card').forEach(card => {
-        const vid = card.querySelector('.card-hover-video');
-        if (!vid) return;
-
-        card.addEventListener('mouseenter', () => {
-            vid.play().catch(() => {});
-        });
-        card.addEventListener('mouseleave', () => {
-            vid.pause();
-            vid.currentTime = 0;
-        });
-    });
-}
-
-/* =============================================
    INIT
    ============================================= */
 (function init() {
@@ -617,7 +597,6 @@ function initVideoHover() {
         init3DTilt();
         initMagnetic();
         initGlowTracking();
-        initVideoHover();
         ScrollTrigger.refresh();
     });
 })();
