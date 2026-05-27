@@ -3,7 +3,7 @@
 
 <head>
  <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
  <meta name="description"
  content="Explore all games and activities at NASSAA UTH HUB — VR, Bowling, Laser Tag, Arcade, Snooker, Escape Rooms & more across Besant Nagar, ECR and Marina Mall branches.">
  <meta name="theme-color" content="#FF6A00">
@@ -12,6 +12,12 @@
  <meta property="og:description"
  content="15+ thrilling activities across 3 Chennai branches — something epic for everyone!">
  <meta property="og:type" content="website">
+ <meta property="og:url" content="https://nassaauthhub.com/games">
+ <meta property="og:image" content="https://nassaauthhub.com/assets/images/logo.png">
+ <meta property="og:image:width" content="800">
+ <meta property="og:image:height" content="600">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:image" content="https://nassaauthhub.com/assets/images/logo.png">
 
  <title>Our Games & Activities | NASSAA UTH HUB</title>
 
@@ -22,6 +28,10 @@
  rel="stylesheet">
 
  <link rel="stylesheet" href="assets/css/style.css">
+
+ <script type="application/ld+json">
+ {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nassaauthhub.com/"},{"@type":"ListItem","position":2,"name":"Our Games","item":"https://nassaauthhub.com/games"}]}
+ </script>
 </head>
 
 <body>
@@ -33,7 +43,7 @@
  <div class="nav__container">
 
  <a href="index.html" class="nav__logo" aria-label="NASSAA UTH HUB Home">
- <img src="assets/images/logo.png" alt="NASSAA UTH HUB" class="nav__logo-img"
+ <img src="assets/images/logo.png" alt="NASSAA UTH HUB" class="nav__logo-img" width="180" height="90" loading="lazy"
  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
  <span class="nav__logo-fallback" style="display:none;flex-direction:column;gap:2px;">
  <span class="nav__logo-text">NASSAA</span>
@@ -160,7 +170,7 @@
   <div class="activities-grid">
 
   <article class="activity-card" data-anim="fade-up" onclick="location.href='activity-arcade.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-arcade.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-arcade.mp4" muted loop playsinline preload="metadata"></video>
   <span class="activity-card__badge activity-card__badge--popular">Popular</span>
   <span class="activity-card__icon" aria-hidden="true">🕹️</span>
   <h3 class="activity-card__name">Arcade Games</h3>
@@ -168,7 +178,7 @@
   </article>
 
   <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.08s" onclick="location.href='activity-vr.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-vr.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-vr.mp4" muted loop playsinline preload="metadata"></video>
   <span class="activity-card__badge activity-card__badge--popular">Popular</span>
   <span class="activity-card__icon" aria-hidden="true">🧠</span>
   <h3 class="activity-card__name">VR Experiences</h3>
@@ -176,7 +186,7 @@
   </article>
 
   <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.16s" onclick="location.href='activity-futsal.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-futsal.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-futsal.mp4" muted loop playsinline preload="metadata"></video>
   <span class="activity-card__badge activity-card__badge--exclusive">Exclusive</span>
   <span class="activity-card__icon" aria-hidden="true">⚽</span>
   <h3 class="activity-card__name">Futsal Arena</h3>
@@ -184,14 +194,14 @@
   </article>
 
   <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.24s" onclick="location.href='activity-laser-tag.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-laser-tag.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-laser-tag.mp4" muted loop playsinline preload="metadata"></video>
   <span class="activity-card__icon" aria-hidden="true">🔫</span>
   <h3 class="activity-card__name">Laser Tag Battles</h3>
   
   </article>
 
   <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.32s" onclick="location.href='activity-bowling.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-bowling.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-bowling.mp4" muted loop playsinline preload="metadata"></video>
   <span class="activity-card__badge activity-card__badge--popular">Popular</span>
   <span class="activity-card__icon" aria-hidden="true">🎳</span>
   <h3 class="activity-card__name">Bowling Alley</h3>
@@ -199,21 +209,21 @@
   </article>
 
   <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.4s" onclick="location.href='activity-snooker.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-snooker.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-snooker.mp4" muted loop playsinline preload="metadata"></video>
   <span class="activity-card__icon" aria-hidden="true">🎱</span>
   <h3 class="activity-card__name">Snooker &amp; 8 Ball Pool</h3>
   
   </article>
 
   <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.56s" onclick="location.href='activity-ps5.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-ps5.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-ps5.mp4" muted loop playsinline preload="metadata"></video>
   <span class="activity-card__icon" aria-hidden="true">🎮</span>
   <h3 class="activity-card__name">PS5 Console Lounge</h3>
   
   </article>
 
   <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.64s" onclick="location.href='activity-cricket.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-cricket.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-cricket.mp4" muted loop playsinline preload="metadata"></video>
   <span class="activity-card__badge activity-card__badge--exclusive">Exclusive</span>
   <span class="activity-card__icon" aria-hidden="true">🏏</span>
   <h3 class="activity-card__name">Cricket Simulator</h3>
@@ -221,21 +231,21 @@
   </article>
 
   <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.72s" onclick="location.href='activity-laser-maze.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-laser-maze.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-laser-maze.mp4" muted loop playsinline preload="metadata"></video>
   <span class="activity-card__icon" aria-hidden="true">🧩</span>
   <h3 class="activity-card__name">Laser Maze</h3>
   
   </article>
 
   <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.8s" onclick="location.href='activity-floor-lava.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-floor-lava.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-floor-lava.mp4" muted loop playsinline preload="metadata"></video>
   <span class="activity-card__icon" aria-hidden="true">🌋</span>
   <h3 class="activity-card__name">Floor is Lava</h3>
   
   </article>
 
   <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.88s" onclick="location.href='activity-racing-simulator.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-racing-simulator.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-racing-simulator.mp4" muted loop playsinline preload="metadata"></video>
   <span class="activity-card__badge activity-card__badge--popular">Popular</span>
   <span class="activity-card__icon" aria-hidden="true">🏎️</span>
   <h3 class="activity-card__name">Racing Simulator</h3>
@@ -276,7 +286,7 @@
  <div class="activities-grid">
 
  <article class="activity-card" data-anim="fade-up" onclick="location.href='activity-arcade.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-arcade.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-arcade.mp4" muted loop playsinline preload="metadata"></video>
  <span class="activity-card__badge activity-card__badge--popular">Popular</span>
  <span class="activity-card__icon" aria-hidden="true">🕹️</span>
  <h3 class="activity-card__name">Arcade Games</h3>
@@ -284,7 +294,7 @@
  </article>
 
  <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.08s" onclick="location.href='activity-vr.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-vr.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-vr.mp4" muted loop playsinline preload="metadata"></video>
  <span class="activity-card__badge activity-card__badge--popular">Popular</span>
  <span class="activity-card__icon" aria-hidden="true">🧠</span>
  <h3 class="activity-card__name">VR Games</h3>
@@ -292,14 +302,14 @@
  </article>
 
  <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.16s" onclick="location.href='activity-laser-tag.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-laser-tag.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-laser-tag.mp4" muted loop playsinline preload="metadata"></video>
  <span class="activity-card__icon" aria-hidden="true">🔫</span>
  <h3 class="activity-card__name">Laser Tag</h3>
  
  </article>
 
  <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.24s" onclick="location.href='activity-bowling.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-bowling.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-bowling.mp4" muted loop playsinline preload="metadata"></video>
  <span class="activity-card__badge activity-card__badge--popular">Popular</span>
  <span class="activity-card__icon" aria-hidden="true">🕹️</span>
  <h3 class="activity-card__name">Bowling Alley</h3>
@@ -307,7 +317,7 @@
  </article>
 
  <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.32s" onclick="location.href='activity-escape.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-escape.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-escape.mp4" muted loop playsinline preload="metadata"></video>
  <span class="activity-card__badge activity-card__badge--exclusive">Exclusive</span>
  <span class="activity-card__icon" aria-hidden="true">🗝️</span>
  <h3 class="activity-card__name">Escape Room Adventures</h3>
@@ -315,28 +325,28 @@
  </article>
 
  <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.4s" onclick="location.href='activity-floor-lava.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-floor-lava.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-floor-lava.mp4" muted loop playsinline preload="metadata"></video>
  <span class="activity-card__icon" aria-hidden="true">🌋</span>
  <h3 class="activity-card__name">Floor is Lava</h3>
  
  </article>
 
  <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.48s" onclick="location.href='activity-laser-maze.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-laser-maze.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-laser-maze.mp4" muted loop playsinline preload="metadata"></video>
  <span class="activity-card__icon" aria-hidden="true">🧩</span>
  <h3 class="activity-card__name">Laser Maze</h3>
  
  </article>
 
   <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.64s" onclick="location.href='activity-ps5.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-ps5.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-ps5.mp4" muted loop playsinline preload="metadata"></video>
   <span class="activity-card__icon" aria-hidden="true">🎮</span>
   <h3 class="activity-card__name">PS5 Console Lounge</h3>
   
   </article>
 
   <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.72s" onclick="location.href='activity-bumper-car.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-bumper-car.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-bumper-car.mp4" muted loop playsinline preload="metadata"></video>
   <span class="activity-card__badge activity-card__badge--popular">Popular</span>
   <span class="activity-card__icon" aria-hidden="true">🚗</span>
   <h3 class="activity-card__name">Bumper Car Arena</h3>
@@ -379,7 +389,7 @@
  <div class="activities-grid">
 
  <article class="activity-card" data-anim="fade-up" onclick="location.href='activity-bowling.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-bowling.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-bowling.mp4" muted loop playsinline preload="metadata"></video>
  <span class="activity-card__badge activity-card__badge--popular">Popular</span>
  <span class="activity-card__icon" aria-hidden="true">🎳</span>
  <h3 class="activity-card__name">Bowling Alley</h3>
@@ -387,7 +397,7 @@
  </article>
 
  <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.1s" onclick="location.href='activity-vr.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-vr.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-vr.mp4" muted loop playsinline preload="metadata"></video>
  <span class="activity-card__badge activity-card__badge--popular">Popular</span>
  <span class="activity-card__icon" aria-hidden="true">🧠</span>
  <h3 class="activity-card__name">VR Gaming Experiences</h3>
@@ -395,14 +405,14 @@
  </article>
 
  <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.2s" onclick="location.href='activity-laser-tag.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-laser-tag.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-laser-tag.mp4" muted loop playsinline preload="metadata"></video>
  <span class="activity-card__icon" aria-hidden="true">🔫</span>
  <h3 class="activity-card__name">Laser Tag Arena</h3>
  
  </article>
 
  <article class="activity-card" data-anim="fade-up" style="--anim-delay: 0.3s" onclick="location.href='activity-ps5.html'">
-  <video class="card-hover-video" autoplay src="assets/videos/activity-ps5.mp4" muted loop playsinline preload="auto"></video>
+  <video class="card-hover-video" autoplay src="assets/videos/activity-ps5.mp4" muted loop playsinline preload="metadata"></video>
  <span class="activity-card__icon" aria-hidden="true">🎮</span>
  <h3 class="activity-card__name">PS5 Console Lounge</h3>
  
@@ -549,7 +559,7 @@
 
  <div class="footer__brand">
  <a href="index.html" class="footer__logo-wrap" aria-label="NASSAA UTH HUB">
- <img src="assets/images/logo.png" alt="NASSAA UTH HUB" class="footer__logo-img"
+ <img src="assets/images/logo.png" alt="NASSAA UTH HUB" class="footer__logo-img" width="180" height="90" loading="lazy"
  onerror="this.style.display='none';this.nextElementSibling.style.display='block';this.nextElementSibling.nextElementSibling.style.display='block'">
  <span class="footer__logo-text" style="display:none;">NASSAA</span>
  <span class="footer__logo-sub" style="display:none;">UTH HUB</span>

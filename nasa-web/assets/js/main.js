@@ -131,14 +131,15 @@
         });
     }
 
-    /* Auto-advance */
+    /* Auto-advance — uses recursive setTimeout so it respects tab visibility */
     function startAuto() {
-        autoTimer = setInterval(() => {
-            goTo(currentPage < totalPages - 1 ? currentPage + 1 : 0);
+        autoTimer = setTimeout(function tick() {
+            if (!document.hidden) goTo(currentPage < totalPages - 1 ? currentPage + 1 : 0);
+            autoTimer = setTimeout(tick, 5000);
         }, 5000);
     }
     function stopAuto() {
-        clearInterval(autoTimer);
+        clearTimeout(autoTimer);
     }
 
     /* Button controls */
@@ -293,4 +294,39 @@
             });
         })
         .catch(() => slots.forEach(s => s.innerHTML = ''));
+})();
+
+/* =============================================
+   8. HERO VIDEO — PAUSE WHEN TAB IS HIDDEN
+   ============================================= */
+(function initHeroVideoPause() {
+    const heroVideo = document.querySelector('.hero__video');
+    if (!heroVideo) return;
+    document.addEventListener('visibilitychange', () => {
+        document.hidden ? heroVideo.pause() : heroVideo.play().catch(() => {});
+    });
+})();
+
+/* =============================================
+   9. CARD VIDEO PLAY/PAUSE ON VIEWPORT
+   ============================================= */
+(function initVideoLazyLoad() {
+    if (!('IntersectionObserver' in window)) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target.querySelector('video.card-hover-video');
+            if (!video) return;
+            if (entry.isIntersecting) {
+                video.play().catch(() => {});
+            } else {
+                video.pause();
+            }
+        });
+    }, { rootMargin: '100px' });
+
+    document.querySelectorAll('.game-card, .activity-card').forEach(card => {
+        const video = card.querySelector('video.card-hover-video');
+        if (video) observer.observe(card);
+    });
 })();

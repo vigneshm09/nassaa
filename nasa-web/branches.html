@@ -3,7 +3,7 @@
 
 <head>
  <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
  <meta name="description"
  content="Explore all branches of NASSAA UTH HUB — Besant Nagar, ECR, Marina Mall, and upcoming branches in Pondicherry and Madurai.">
  <meta name="theme-color" content="#FF6A00">
@@ -12,6 +12,12 @@
  <meta property="og:description"
  content="5 branches across Tamil Nadu — including upcoming locations in Pondicherry and Madurai. Find the one nearest to you!">
  <meta property="og:type" content="website">
+ <meta property="og:url" content="https://nassaauthhub.com/branches">
+ <meta property="og:image" content="https://nassaauthhub.com/assets/images/logo.png">
+ <meta property="og:image:width" content="800">
+ <meta property="og:image:height" content="600">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:image" content="https://nassaauthhub.com/assets/images/logo.png">
 
  <title>Our Branches | NASSAA UTH HUB</title>
 
@@ -22,6 +28,10 @@
  rel="stylesheet">
 
  <link rel="stylesheet" href="assets/css/style.css">
+
+ <script type="application/ld+json">
+ {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nassaauthhub.com/"},{"@type":"ListItem","position":2,"name":"Branches","item":"https://nassaauthhub.com/branches"}]}
+ </script>
 </head>
 
 <body>
@@ -33,7 +43,7 @@
  <div class="nav__container">
 
  <a href="index.html" class="nav__logo" aria-label="NASSAA UTH HUB Home">
- <img src="assets/images/logo.png" alt="NASSAA UTH HUB" class="nav__logo-img"
+ <img src="assets/images/logo.png" alt="NASSAA UTH HUB" class="nav__logo-img" width="180" height="90" loading="lazy"
  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
  <span class="nav__logo-fallback" style="display:none;flex-direction:column;gap:2px;">
  <span class="nav__logo-text">NASSAA</span>
@@ -109,105 +119,127 @@
  </div>
  </section>
 
- <!-- =============================================
- CURRENT BRANCHES
- ============================================= -->
- <section class="section" aria-label="Current open branches">
- <div class="container">
+  <!-- =============================================
+  OUR BRANCHES
+  ============================================= -->
+  <section class="section" aria-label="Our branches">
+  <div class="container">
 
- <div class="section__header" data-anim="fade-up">
- <div class="section__tag">Open Now</div>
- <h2 class="section__title">Our Operating Branches</h2>
- <p class="section__subtitle">Three exciting locations across Chennai — each with its own unique mix of activities. Walk in or book ahead!</p>
- </div>
+  <div class="section__header" data-anim="fade-up">
+  <div class="section__tag">Locations</div>
+  <h2 class="section__title">Our Branches</h2>
+  <p class="section__subtitle">3 open across Chennai + 2 launching soon.</p>
+  </div>
 
- <div class="branches__grid">
+  <div class="branches__grid">
 
- <!-- BESANT NAGAR -->
- <div class="branch-card" data-anim="fade-up">
- <div class="branch-card__num">BRANCH 01</div>
- <div class="branch-card__icon" aria-hidden="true">🏖️</div>
- <h3 class="branch-card__name">Besant Nagar</h3>
- <p class="branch-card__addr">5th Avenue, Elliot's Promenade, Besant Nagar, Chennai, Tamil Nadu 600090</p>
- <a href="tel:+919456789800" class="branch-card__phone" aria-label="Call Besant Nagar branch">+91 94567 89800</a>
- <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
- <a href="contact.html#besant-nagar" class="btn btn--sm btn--outline">View on Map</a>
- <a href="games.html#besant-nagar" class="btn btn--sm btn--outline">12 Activities</a>
- </div>
- </div>
+  <!-- BESANT NAGAR -->
+  <div class="branch-card" id="besant-nagar" data-anim="fade-up">
+  <div class="branch-card__num">BRANCH 01</div>
+  <div class="branch-card__icon" aria-hidden="true">🏖️</div>
+  <h3 class="branch-card__name">Besant Nagar</h3>
+  <p class="branch-card__addr">5th Avenue, Elliot's Promenade, Besant Nagar, Chennai, Tamil Nadu 600090</p>
+  <a href="tel:+919456789800" class="branch-card__phone" aria-label="Call Besant Nagar branch">+91 94567 89800</a>
+  <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
+  <a href="contact.html#besant-nagar" class="btn btn--sm btn--outline">View on Map</a>
+  <a href="games.html#besant-nagar" class="btn btn--sm btn--outline">12 Activities</a>
+  </div>
+  </div>
 
- <!-- MARINA MALL -->
- <div class="branch-card" data-anim="fade-up" style="--anim-delay: 0.15s">
- <div class="branch-card__num">BRANCH 02</div>
- <div class="branch-card__icon" aria-hidden="true">🛍️</div>
- <h3 class="branch-card__name">Marina Mall</h3>
- <p class="branch-card__addr">13/1A, Old Mahabalipuram Road, OMR Marina Mall, Egattur, Chennai, Tamil Nadu 603103</p>
- <a href="tel:+919456789400" class="branch-card__phone" aria-label="Call Marina Mall branch">+91 94567 89400</a>
- <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
- <a href="contact.html#marina-mall" class="btn btn--sm btn--outline">View on Map</a>
- <a href="games.html#marina-mall" class="btn btn--sm btn--outline">4 Activities</a>
- </div>
- </div>
+  <!-- MARINA MALL -->
+  <div class="branch-card" id="marina-mall" data-anim="fade-up" style="--anim-delay: 0.15s">
+  <div class="branch-card__num">BRANCH 02</div>
+  <div class="branch-card__icon" aria-hidden="true">🛍️</div>
+  <h3 class="branch-card__name">Marina Mall</h3>
+  <p class="branch-card__addr">13/1A, Old Mahabalipuram Road, OMR Marina Mall, Egattur, Chennai, Tamil Nadu 603103</p>
+  <a href="tel:+919456789400" class="branch-card__phone" aria-label="Call Marina Mall branch">+91 94567 89400</a>
+  <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
+  <a href="contact.html#marina-mall" class="btn btn--sm btn--outline">View on Map</a>
+  <a href="games.html#marina-mall" class="btn btn--sm btn--outline">4 Activities</a>
+  </div>
+  </div>
 
- <!-- ECR -->
- <div class="branch-card" data-anim="fade-up" style="--anim-delay: 0.3s">
- <div class="branch-card__num">BRANCH 03</div>
- <div class="branch-card__icon" aria-hidden="true">🌊</div>
- <h3 class="branch-card__name">ECR Branch</h3>
- <p class="branch-card__addr">East Coast Road, Injambakkam, Chennai, Tamil Nadu 600115</p>
- <a href="tel:+919456789200" class="branch-card__phone" aria-label="Call ECR branch">+91 94567 89200</a>
- <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
- <a href="contact.html#ecr" class="btn btn--sm btn--outline">View on Map</a>
- <a href="games.html#ecr" class="btn btn--sm btn--outline">10 Activities</a>
- </div>
- </div>
+  <!-- ECR -->
+  <div class="branch-card" id="ecr" data-anim="fade-up" style="--anim-delay: 0.3s">
+  <div class="branch-card__num">BRANCH 03</div>
+  <div class="branch-card__icon" aria-hidden="true">🌊</div>
+  <h3 class="branch-card__name">ECR Branch</h3>
+  <p class="branch-card__addr">East Coast Road, Injambakkam, Chennai, Tamil Nadu 600115</p>
+  <a href="tel:+919456789200" class="branch-card__phone" aria-label="Call ECR branch">+91 94567 89200</a>
+  <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
+  <a href="contact.html#ecr" class="btn btn--sm btn--outline">View on Map</a>
+  <a href="games.html#ecr" class="btn btn--sm btn--outline">10 Activities</a>
+  </div>
+  </div>
 
- </div>
- </div>
- </section>
+  <!-- PONDICHERRY -->
+  <div class="branch-card branch-card--featured" id="pondicherry" data-anim="fade-up" style="--anim-delay: 0.45s">
+  <div class="branch-card__num" style="color: var(--color-highlight);">UPCOMING</div>
+  <div class="branch-card__icon" aria-hidden="true">🏛️</div>
+  <h3 class="branch-card__name">Pondicherry</h3>
+  <p class="branch-card__addr">🚀 Coming to the French Quarter — next-gen gaming, VR &amp; bowling taking over the Promenade!</p>
+  <div style="margin-top: 8px;">
+  <span style="display: inline-block; padding: 4px 14px; background: rgba(255, 209, 102, 0.12); color: var(--color-highlight); border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em;">Launching Soon</span>
+  </div>
+  </div>
 
- <!-- =============================================
- UPCOMING BRANCHES
- ============================================= -->
- <section class="section" aria-label="Upcoming branches" style="background: var(--color-surface);">
- <div class="container">
+  <!-- MADURAI -->
+  <div class="branch-card branch-card--featured" id="madurai" data-anim="fade-up" style="--anim-delay: 0.6s">
+  <div class="branch-card__num" style="color: var(--color-highlight);">UPCOMING</div>
+  <div class="branch-card__icon" aria-hidden="true">🏛️</div>
+  <h3 class="branch-card__name">Madurai</h3>
+  <p class="branch-card__addr">🔥 Asia's first underwater-themed gaming zone — coming to the Temple City!</p>
+  <div style="margin-top: 8px;">
+  <span style="display: inline-block; padding: 4px 14px; background: rgba(255, 209, 102, 0.12); color: var(--color-highlight); border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em;">Launching Soon</span>
+  </div>
+  </div>
 
- <div class="section__header" data-anim="fade-up">
- <div class="section__tag">Coming Soon</div>
- <h2 class="section__title">Upcoming Branches</h2>
- <p class="section__subtitle">We're expanding! NASSAA UTH HUB is bringing the ultimate gaming experience to more cities across Tamil Nadu.</p>
- </div>
+  </div>
+  </div>
+  </section>
 
- <div class="branches__grid">
+  <!-- =============================================
+  EXPLORE MORE ON NASSAA
+  ============================================= -->
+  <section class="section" aria-label="Explore more on NASSAA" style="background: var(--color-surface);">
+  <div class="container">
 
- <!-- PONDICHERRY -->
- <div class="branch-card branch-card--featured" data-anim="fade-up">
- <div class="branch-card__num" style="color: var(--color-highlight);">UPCOMING</div>
- <div class="branch-card__icon" aria-hidden="true">🏛️</div>
- <h3 class="branch-card__name">Pondicherry</h3>
- <p class="branch-card__addr">Coming soon to the beautiful coastal city of Pondicherry. Get ready for an all-new gaming destination with an exciting mix of activities.</p>
- <div style="margin-top: 8px;">
- <span style="display: inline-block; padding: 4px 14px; background: rgba(255, 209, 102, 0.12); color: var(--color-highlight); border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em;">Launching Soon</span>
- </div>
- </div>
+  <div class="section__header" data-anim="fade-up">
+  <div class="section__tag">Discover More</div>
+  <h2 class="section__title">Explore More on NASSAA</h2>
+  <p class="section__subtitle">Beyond gaming — experience the wonders of our dinosaurs museum and the thrill of escape rooms.</p>
+  </div>
 
- <!-- MADURAI -->
- <div class="branch-card branch-card--featured" data-anim="fade-up" style="--anim-delay: 0.15s">
- <div class="branch-card__num" style="color: var(--color-highlight);">UPCOMING</div>
- <div class="branch-card__icon" aria-hidden="true">🏛️</div>
- <h3 class="branch-card__name">Madurai</h3>
- <p class="branch-card__addr">Headed to the cultural capital of Tamil Nadu! Our Madurai branch will bring world-class gaming and entertainment to the heart of the city.</p>
- <div style="margin-top: 8px;">
- <span style="display: inline-block; padding: 4px 14px; background: rgba(255, 209, 102, 0.12); color: var(--color-highlight); border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em;">Launching Soon</span>
- </div>
- </div>
+  <div class="branches__grid">
 
- </div>
- </div>
- </section>
+  <!-- DINOSAURS MUSEUM -->
+  <div class="branch-card" data-anim="fade-up">
+  <div class="branch-card__num" style="color: var(--color-highlight);">NEW</div>
+  <div class="branch-card__icon" aria-hidden="true">🦕</div>
+  <h3 class="branch-card__name">NASSAA Dinosaurs Museum</h3>
+  <p class="branch-card__addr">191/1A2, Kalpakkam, East Coast Rd, Mahabalipuram, Tamil Nadu 603104</p>
+  <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
+  <a href="contact.html#dinosaurs-museum" class="btn btn--sm btn--outline">View on Map</a>
+  </div>
+  </div>
 
- <!-- =============================================
- BRANCH OVERVIEW TABLE
+  <!-- ESCAPE ROOM -->
+  <div class="branch-card branch-card--featured" data-anim="fade-up" style="--anim-delay: 0.15s">
+  <div class="branch-card__num" style="color: var(--color-highlight);">UPCOMING</div>
+  <div class="branch-card__icon" aria-hidden="true">🗝️</div>
+  <h3 class="branch-card__name">Escape Room</h3>
+  <p class="branch-card__addr">Coming soon at Besant Nagar. Get ready for an immersive puzzle experience!</p>
+  <div style="margin-top: 8px;">
+  <span style="display: inline-block; padding: 4px 14px; background: rgba(255, 209, 102, 0.12); color: var(--color-highlight); border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em;">Launching Soon</span>
+  </div>
+  </div>
+
+  </div>
+  </div>
+  </section>
+
+  <!-- =============================================
+  BRANCH OVERVIEW TABLE
  ============================================= -->
  <section class="section" aria-label="Branch comparison overview">
  <div class="container">
@@ -248,10 +280,11 @@
  <td><span aria-hidden="true">🌊</span> ECR Branch</td>
  <td><span style="color: #22c55e; font-weight: 700;">● Open</span></td>
  <td>Chennai (ECR)</td>
-<td>10 Activities</td>
-  </tr>
-  <tr>
-  <td><span aria-hidden="true">🏛️</span> Pondicherry</td>
+  <td>10 Activities</td>
+  <td><a href="tel:+919456789200" style="color: var(--color-primary);">+91 94567 89200</a></td>
+   </tr>
+   <tr>
+   <td><span aria-hidden="true">🏛️</span> Pondicherry</td>
  <td><span style="color: var(--color-highlight); font-weight: 700;">● Upcoming</span></td>
  <td>Pondicherry</td>
  <td>TBA</td>
@@ -298,7 +331,7 @@
 
  <div class="footer__brand">
  <a href="index.html" class="footer__logo-wrap" aria-label="NASSAA UTH HUB">
- <img src="assets/images/logo.png" alt="NASSAA UTH HUB" class="footer__logo-img"
+ <img src="assets/images/logo.png" alt="NASSAA UTH HUB" class="footer__logo-img" width="180" height="90" loading="lazy"
  onerror="this.style.display='none';this.nextElementSibling.style.display='block';this.nextElementSibling.nextElementSibling.style.display='block'">
  <span class="footer__logo-text" style="display:none;">NASSAA</span>
  <span class="footer__logo-sub" style="display:none;">UTH HUB</span>

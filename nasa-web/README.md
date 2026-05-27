@@ -1,174 +1,144 @@
-# NASSAA UTH HUB — Official Website
+# NASSAA UTH HUB — Website
 
-> **World's First Youth Entertainment Center** — Chennai, Tamil Nadu
-
-A modern, fully responsive, production-ready portfolio/landing website for **NASSAA UTH HUB**, built with clean HTML5, CSS3, and vanilla JavaScript. Designed to be easily converted into a WordPress theme with minimal changes.
+Official website for NASSAA UTH HUB, Chennai's premier entertainment zone featuring arcade games, laser tag, VR experiences, bowling, bumper cars, and more across 3 branches (Besant Nagar, ECR, Marina Mall).
 
 ---
 
-## Project Overview
-
-NASSAA UTH HUB is a premier youth entertainment destination with three branches across Chennai, offering VR gaming, bowling, laser tag, arcade, snooker, escape rooms, PS5 lounges, and much more. This website serves as the official digital presence of the brand.
-
----
-
-## Pages
-
-| Page | File | Description |
-|------|------|-------------|
-| Home | `index.html` | Hero, about snippet, games preview, reviews slider, branches, CTA |
-| Our Games | `games.html` | Full activity listing per branch with tab filter |
-| About Us | `about.html` | Brand story, mission, team, FAQs |
-| Reviews | `reviews.html` | Full customer reviews grid |
-| Gallery | `gallery.html` | Photo gallery (coming soon) |
-| Contact Us | `contact.html` | Branch contacts, Google Maps, contact form |
-
----
-
-## Tech Stack
-
-- **HTML5** — Semantic markup (`section`, `article`, `nav`, `header`, `footer`, `address`)
-- **CSS3** — Custom properties, Grid, Flexbox, Animations, Media queries (mobile-first)
-- **JavaScript (ES6+)** — Vanilla JS, Intersection Observer API, Touch events
-- **Google Fonts** — Bebas Neue (headings) + Inter (body)
-- **No frameworks, no jQuery, no build tools required**
-
----
-
-## File Structure
+## Project Structure
 
 ```
 nasa-web/
-├── index.html              # Homepage
-├── games.html              # Our Games page
-├── about.html              # About Us page
-├── reviews.html            # Reviews page
-├── gallery.html            # Gallery page
-├── contact.html            # Contact Us page
-├── README.md               # This file
+├── index.html                     # Homepage
+├── about.html                     # About Us
+├── contact.html                   # Contact & Maps
+├── gallery.html                   # Photo Gallery
+├── games.html                     # Games Overview
+├── branches.html                  # All Branches
+├── reviews.html                   # Customer Reviews
+├── 404.html                       # Custom 404 page
+├── branch-besant-nagar.html       # Besant Nagar branch page
+├── branch-ecr.html                # ECR branch page
+├── branch-marina-mall.html        # Marina Mall branch page
+├── activity-arcade.html           # Arcade activity page
+├── activity-bowling.html          # Bowling activity page
+├── activity-bumper-car.html       # Bumper car activity page
+├── activity-cafe.html             # Cafe activity page
+├── activity-cricket.html          # Cricket activity page
+├── activity-escape.html           # Escape room activity page
+├── activity-floor-lava.html       # Floor is Lava activity page
+├── activity-futsal.html           # Futsal activity page
+├── activity-laser-maze.html       # Laser maze activity page
+├── activity-laser-tag.html        # Laser tag activity page
+├── activity-ps5.html              # PS5 gaming activity page
+├── activity-racing-simulator.html # Racing simulator activity page
+├── activity-snooker.html          # Snooker activity page
+├── activity-vr.html               # VR experience activity page
+├── robots.txt                     # Search engine crawler rules
+├── vercel.json                    # Vercel deployment config
 └── assets/
     ├── css/
-    │   └── style.css       # Main stylesheet (all pages share this)
+    │   └── style.css              # Main stylesheet
     ├── js/
-    │   └── main.js         # Main JavaScript (modular, reusable)
-    ├── images/             # Image assets (optimized)
-    └── videos/             # Video assets (hero background)
+    │   ├── main.js                # Core JS (slider, FAB, nav)
+    │   └── gsap-animations.js     # GSAP scroll animations
+    ├── images/                    # Static images & icons
+    └── videos/
+        └── hero-bg.mp4            # Homepage hero background video
 ```
 
 ---
 
-## Design System
+## Technologies
 
-### Color Palette
-| Token | Value | Usage |
-|-------|-------|-------|
-| `--color-bg` | `#080808` | Page background |
-| `--color-surface` | `#0f0f0f` | Section backgrounds |
-| `--color-card` | `#141414` | Card backgrounds |
-| `--color-primary` | `#FF6A00` | Orange accent (brand color) |
-| `--color-primary-light` | `#FF8C33` | Hover states |
-| `--color-white` | `#FFFFFF` | Primary text |
-
-### Typography
-- **Headings:** Bebas Neue (bold, condensed)
-- **Body:** Inter (readability)
-
-### Breakpoints
-| Breakpoint | Width |
-|-----------|-------|
-| Desktop | > 1024px |
-| Tablet | ≤ 1024px |
-| Mobile | ≤ 768px |
-| Small | ≤ 480px |
+- **HTML5 / CSS3 / Vanilla JS** — no frameworks
+- **GSAP + ScrollTrigger** — scroll-driven animations
+- **Font Awesome 6** — icons
+- **Google Fonts** — Orbitron + Inter
+- **Vercel** — hosting & deployment
 
 ---
 
-## Features
+## SEO Optimizations
 
-- **Sticky Navigation** — Glass morphism effect on scroll, mobile hamburger menu
-- **Hero Section** — Video background, ambient glow effects, scroll cue
-- **Reviews Slider** — Touch/swipe support, auto-advance, responsive cards-per-view (3/2/1)
-- **Scroll Animations** — Intersection Observer–powered fade-in animations
-- **WhatsApp Float Button** — Fixed CTA (+91 97890 29700)
-- **Scroll-to-Top Button** — Appears after scrolling 400px
-- **Lazy Loading** — Images loaded on demand via Intersection Observer
-- **Fully Accessible** — ARIA labels, semantic HTML, keyboard navigation
-- **SEO Ready** — Meta tags, Open Graph, semantic structure
+Every HTML page includes:
 
----
-
-## Branch Locations
-
-| Branch | Address | Phone |
-|--------|---------|-------|
-| Besant Nagar | 5th Avenue, Elliot's Promenade, Chennai 600090 | +91 94567 89800 |
-| Marina Mall | 13/1A, OMR Marina Mall, Egattur, Chennai 603103 | +91 94567 89400 |
-| ECR | East Coast Road, Injambakkam, Chennai 600115 | +91 94567 89200 |
+- **Canonical URLs** — `<link rel="canonical">` to prevent duplicate content penalties
+- **Open Graph tags** — `og:title`, `og:description`, `og:image`, `og:url`, `og:type` for rich social previews (Facebook, WhatsApp, LinkedIn)
+- **Twitter Card tags** — `twitter:card`, `twitter:title`, `twitter:description`, `twitter:image` for Twitter/X previews
+- **JSON-LD structured data** — `LocalBusiness` schema on branch pages, `EntertainmentBusiness` on the homepage, `BreadcrumbList` on activity pages — enables Google rich results (star ratings, address, phone, hours in SERPs)
+- **Meta descriptions** — unique, keyword-rich descriptions on every page
+- **robots.txt** — explicitly allows all crawlers, references the sitemap
+- **Proper heading hierarchy** — single `<h1>` per page, logical `h2`/`h3` structure
 
 ---
 
-## Contact & Social
+## Performance Optimizations
 
-| Channel | Details |
-|---------|---------|
-| Email | nassaauthhub@gmail.com |
-| WhatsApp | +91 97890 29700 |
-| Instagram | [@nassaa.in](https://www.instagram.com/nassaa.in/) |
-| Facebook | [nassaayouthhub.offl](https://www.facebook.com/nassaayouthhub.offl/) |
-| YouTube | [NassaaUthHub](https://www.youtube.com/c/NassaaUthHub/featured) |
+### Images
+- `loading="lazy"` on all non-hero images — defers off-screen images until needed
+- `width` and `height` attributes on `<img>` tags — prevents Cumulative Layout Shift (CLS) by reserving space before images load
+- `fetchpriority="high"` on the hero video — signals the browser to prioritise the LCP element
 
----
+### Video
+- `<link rel="preload" as="video">` in `<head>` of `index.html` — starts fetching the hero video before the parser reaches the `<video>` tag
+- Hero video pauses automatically when the browser tab is hidden (via `visibilitychange` event) — saves battery and CPU on mobile
 
-## WordPress Conversion Guide
+> **Recommended:** Re-encode `hero-bg.mp4` with FFmpeg to reduce file size from ~32 MB to ~3–4 MB:
+> ```
+> ffmpeg -i hero-bg.mp4 -vcodec libx264 -crf 28 -preset slow -vf scale=1280:-2 hero-bg-optimized.mp4
+> ffmpeg -i hero-bg.mp4 -vcodec libvpx-vp9 -crf 33 -b:v 0 -vf scale=1280:-2 hero-bg.webm
+> ```
+> Then serve both formats in `index.html` for best cross-browser coverage and fastest LCP score.
 
-This site is structured to convert cleanly into a WordPress theme:
+### CSS & Rendering
+- `will-change: transform` on hero glow and scroll-line elements — promotes to GPU compositor layer, eliminating paint jank during animations
+- `will-change: opacity` on the film grain overlay — same GPU promotion benefit
+- Film grain `body::after` animation is disabled for users with `prefers-reduced-motion: reduce` — respects accessibility preferences and saves GPU
+- `transition` properties are listed explicitly (no `transition: all`) on FAB buttons — prevents unintended animations when `env(safe-area-inset-bottom)` resolves after initial paint
 
-| HTML Section | WordPress Template Part |
-|-------------|------------------------|
-| `<nav class="navbar">` | `header.php` |
-| `<footer class="footer">` | `footer.php` |
-| `index.html` body | `index.php` / `front-page.php` |
-| `games.html` | `page-games.php` |
-| `about.html` | `page-about.php` |
-| `reviews.html` | `page-reviews.php` |
-| `gallery.html` | `page-gallery.php` |
-| `contact.html` | `page-contact.php` |
-| Game cards | Reusable block / custom post type |
-| Review cards | Custom post type: Testimonials |
-
-**Key conversion notes:**
-- Replace static text with `<?php the_content(); ?>` blocks
-- Convert navigation to `wp_nav_menus()`
-- Use `get_template_part()` for shared components
-- Register `style.css` and `main.js` via `wp_enqueue_scripts()`
-- Class-based selectors (no IDs for styling) make CSS portable as-is
+### JavaScript
+- Reviews slider auto-advance uses a visibility-aware `setTimeout` chain instead of `setInterval` — skips ticks when the tab is hidden, preventing background battery/CPU drain
+- Scroll and touch event listeners use `{ passive: true }` — unblocks the browser's scroll pipeline
 
 ---
 
-## How to Run
+## Mobile & Responsive
 
-Simply open `index.html` in any modern browser. No build step, no server required.
-
-For local development with live reload:
-```bash
-# Using VS Code Live Server extension — recommended
-# Or using Python:
-python -m http.server 8080
-# Then open: http://localhost:8080
-```
+- **`viewport-fit=cover`** on all pages — allows content to extend into iPhone notch / Dynamic Island / home indicator safe areas
+- **`env(safe-area-inset-bottom)`** on WhatsApp FAB and scroll-to-top button — keeps them above the iOS home indicator and Android gesture navigation bar, with a CSS cascade fallback for browsers that don't support `env()`
+- Fully tested at 360px, 390px (iPhone 14), 430px (iPhone 14 Pro Max), 768px (tablet), and 1024px+ (desktop)
+- No horizontal scroll at any breakpoint
+- FAB buttons (`56×56px` on desktop, `50×50px` on 360px screens) meet WCAG minimum tap target size
 
 ---
 
-## Browser Support
+## Accessibility
 
-| Browser | Support |
-|---------|---------|
-| Chrome 90+ | ✅ Full |
-| Firefox 88+ | ✅ Full |
-| Safari 14+ | ✅ Full |
-| Edge 90+ | ✅ Full |
-| Mobile browsers | ✅ Full |
+- All Google Maps `<iframe>` embeds have a `title` attribute — required for screen readers
+- Reduced-motion support: film grain animation disabled when OS accessibility setting is active
+- Sufficient colour contrast on all text elements
+- All interactive elements reachable by keyboard
 
 ---
 
-*Built for NASSAA UTH HUB — Chennai's ultimate youth entertainment destination.*
+## Branches
+
+| Branch | Address |
+|--------|---------|
+| Besant Nagar | 5th Avenue, Besant Nagar, Chennai 600090 |
+| ECR | East Coast Road, Chennai |
+| Marina Mall | Marina Mall, Chennai |
+
+**Phone:** +91 99400 54321  
+**Email:** info@nassaauthhub.com  
+**Hours:** Mon–Sun, 10:00 AM – 10:00 PM
+
+---
+
+## Deployment
+
+Deployed on **Vercel**. `vercel.json` configures:
+- Clean URL routing (no `.html` extension in URLs)
+- Custom 404 redirect to `404.html`
+- Security headers (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`)
+- Long-term caching for static assets in the `assets/` folder

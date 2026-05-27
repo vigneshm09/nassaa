@@ -59,6 +59,10 @@ body::after {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
     mix-blend-mode: overlay;
     opacity: 0.6;
+    will-change: opacity;
+}
+@media (prefers-reduced-motion: reduce) {
+    body::after { display: none; }
 }
 
 img {
@@ -314,6 +318,7 @@ h1, h2, h3, h4, h5 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     height: 100%;
     max-width: var(--container-max);
     margin: 0 auto;
@@ -401,7 +406,9 @@ h1, h2, h3, h4, h5 {
     gap: 5px;
     background: none;
     border: none;
-    padding: 4px;
+    padding: 8px;
+    cursor: pointer;
+    align-self: center;
     z-index: 1001;
 }
 .nav__toggle-bar {
@@ -456,12 +463,14 @@ h1, h2, h3, h4, h5 {
     background: radial-gradient(circle, rgba(255, 106, 0, 0.22) 0%, rgba(255, 60, 0, 0.08) 50%, transparent 70%);
     top: -300px; left: -300px;
     animation: driftA 14s ease-in-out infinite alternate;
+    will-change: transform;
 }
 .hero__glow--br {
     width: 600px; height: 600px;
     background: radial-gradient(circle, rgba(255, 106, 0, 0.15) 0%, rgba(255, 60, 0, 0.05) 55%, transparent 75%);
     bottom: -250px; right: -180px;
     animation: driftB 18s ease-in-out infinite alternate;
+    will-change: transform;
 }
 @keyframes driftA {
     from { transform: translate(0, 0); }
@@ -501,6 +510,7 @@ h1, h2, h3, h4, h5 {
     background: var(--color-primary);
     border-radius: 50%;
     animation: blink 2s ease-in-out infinite;
+    will-change: opacity;
 }
 @keyframes blink {
     0%, 100% { opacity: 1; }
@@ -603,6 +613,7 @@ h1, h2, h3, h4, h5 {
     background: linear-gradient(to bottom, var(--color-primary), transparent);
     animation: scrollPulse 2.2s ease-in-out infinite;
     transform-origin: top;
+    will-change: transform;
 }
 @keyframes scrollPulse {
     0%   { transform: scaleY(0); opacity: 1; transform-origin: top; }
@@ -812,7 +823,7 @@ h1, h2, h3, h4, h5 {
 }
 .game-card__title {
     font-family: var(--font-heading);
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 3vw, 2rem);
     font-weight: 400;
     letter-spacing: 0.05em;
     color: var(--color-white);
@@ -907,7 +918,7 @@ h1, h2, h3, h4, h5 {
 }
 .why-us__title {
     font-family: var(--font-heading);
-    font-size: 1.7rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
     font-weight: 400;
     letter-spacing: 0.04em;
     color: var(--color-white);
@@ -1286,16 +1297,17 @@ h1, h2, h3, h4, h5 {
    ============================================= */
 .whatsapp-float {
     position: fixed;
-    bottom: 28px;
-    right: 50px;
-    width: 58px; height: 58px;
+    bottom: 24px;
+    bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+    right: 20px;
+    width: 56px; height: 56px;
     background: #25D366;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
-    transition: all var(--transition);
+    transition: transform var(--transition), box-shadow var(--transition), color var(--transition);
     z-index: 999;
     color: white;
 }
@@ -1312,9 +1324,10 @@ h1, h2, h3, h4, h5 {
    ============================================= */
 .scroll-top {
     position: fixed;
-    bottom: 98px;
-    right: 50px;
-    width: 42px; height: 42px;
+    bottom: 92px;
+    bottom: calc(92px + env(safe-area-inset-bottom, 0px));
+    right: 21px;
+    width: 40px; height: 40px;
     background: var(--color-card);
     border: 1px solid var(--color-border-subtle);
     border-radius: var(--radius-md);
@@ -1324,13 +1337,13 @@ h1, h2, h3, h4, h5 {
     color: var(--color-white);
     font-size: 1rem;
     opacity: 0;
-    transform: translateY(14px);
-    transition: all var(--transition);
+    pointer-events: none;
+    transition: opacity var(--transition);
     z-index: 998;
 }
 .scroll-top.visible {
     opacity: 1;
-    transform: translateY(0);
+    pointer-events: auto;
 }
 .scroll-top:hover {
     background: var(--color-primary);
@@ -2564,7 +2577,8 @@ textarea.form-control {
     :root { --section-pad: 64px; }
 
     /* Nav */
-    .nav__container { padding: 0 50px 0 24px; }
+    .nav__container { padding: 0 16px; }
+    .nav__logo-img { height: 56px; }
     .nav__toggle { display: flex; }
     .nav__menu {
         position: fixed;
@@ -2582,6 +2596,10 @@ textarea.form-control {
     .nav__list { flex-direction: column; gap: 4px; width: 100%; }
     .nav__link { font-size: 1.2rem; padding: 14px 20px; display: block; text-align: center; }
     .nav__cta  { margin-left: 0; width: 100%; text-align: center; }
+
+    /* FABs — right-align with nav container edge */
+    .whatsapp-float { right: 16px; }
+    .scroll-top { right: 16px; }
 
     /* Hero */
     .hero__stats { width: 100%; justify-content: space-around; }
@@ -2615,6 +2633,8 @@ textarea.form-control {
    21. RESPONSIVE — LARGE MOBILE (≤ 640px)
    ============================================= */
 @media (max-width: 640px) {
+    :root { --section-pad: 56px; }
+
     .games-preview__grid { grid-template-columns: 1fr; }
     .activities-grid { grid-template-columns: 1fr; }
     .branches__grid { grid-template-columns: 1fr; }
@@ -2652,11 +2672,51 @@ textarea.form-control {
    22. RESPONSIVE — SMALL (≤ 480px)
    ============================================= */
 @media (max-width: 480px) {
+    :root { --section-pad: 48px; }
+
     .container { padding: 0 16px; }
     .why-us__grid { grid-template-columns: 1fr; }
     .hero__stat-number { font-size: 1.3rem; }
     .activity-card { padding: 16px 12px; }
     .hero__badge { font-size: 0.65rem; padding: 10px 16px; }
+    .btn { padding: 12px 22px; font-size: 0.85rem; }
+    .btn--lg { padding: 14px 28px; font-size: 0.9rem; }
+}
+
+/* =============================================
+   22b. RESPONSIVE — EXTRA SMALL (≤ 360px)
+   ============================================= */
+@media (max-width: 360px) {
+    :root { --section-pad: 40px; }
+    .container { padding: 0 12px; }
+    .nav__container { padding: 0 12px; }
+    .whatsapp-float { right: 12px; bottom: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); width: 50px; height: 50px; }
+    .scroll-top { right: 12px; bottom: 78px; bottom: calc(78px + env(safe-area-inset-bottom, 0px)); width: 36px; height: 36px; }
+    .nav__logo-img { height: 48px; }
+    .hero__title { font-size: clamp(1.9rem, 9vw, 2.6rem); }
+    .hero__cta .btn { font-size: 0.82rem; padding: 11px 18px; }
+    .section__title { font-size: clamp(1.8rem, 7vw, 2.4rem); }
+    .hero__stats { gap: 0; }
+    .hero__stat { padding: 0 10px; }
+}
+
+/* =============================================
+   22c. GOOGLE MAPS IFRAME — RESPONSIVE WRAPPER
+   ============================================= */
+.map-embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+}
+.map-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* =============================================
@@ -3282,20 +3342,28 @@ article.activity-card { position: relative; }
    ============================================= */
 #gsap-loader {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: var(--color-bg);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 99999;
 }
 .gl-inner {
     text-align: center;
+    width: 100%;
+    max-width: 340px;
+    padding: 0 24px;
+    box-sizing: border-box;
 }
 .gl-logo {
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: clamp(200px, 82vw, 340px);
+    aspect-ratio: 16 / 9;
     margin: 0 auto 28px;
 }
 .gl-logo__part {
@@ -3304,8 +3372,8 @@ article.activity-card { position: relative; }
     overflow: hidden;
 }
 .gl-logo__part img {
-    width: 320px;
-    height: 320px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     display: block;
 }
@@ -3315,7 +3383,7 @@ article.activity-card { position: relative; }
 .gl-logo__part--bl { clip-path: inset(50% 50% 0 0); }
 .gl-logo__part--br { clip-path: inset(50% 0 0 50%); }
 .gl-bar {
-    width: 280px;
+    width: clamp(160px, 60vw, 280px);
     height: 3px;
     background: rgba(255, 106, 0, 0.15);
     border-radius: 9999px;
@@ -3362,9 +3430,7 @@ article.activity-card { position: relative; }
 }
 .fan-stage {
     position: relative;
-    width: 100vw;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
     height: 80vh;
     min-height: 560px;
     max-height: 820px;
@@ -3564,5 +3630,25 @@ article.activity-card { position: relative; }
         width: 170px;
         height: 240px;
         border-radius: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sphere-scene {
+        height: 380px;
+        perspective: 650px;
+    }
+    .sphere-ring {
+        width: 140px;
+        height: 200px;
+    }
+    .sphere-card {
+        width: 140px;
+        height: 200px;
+        border-radius: 10px;
+    }
+    .fan-stage {
+        height: 60vh;
+        min-height: 420px;
     }
 }

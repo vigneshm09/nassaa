@@ -465,6 +465,8 @@ function initActivityDetail() {
    11. HERO PARALLAX
    ============================================= */
 function initHeroParallax() {
+    if (window.matchMedia('(max-width: 768px)').matches) return;
+
     const bg = document.querySelector('.hero__bg');
     if (bg) {
         gsap.to(bg, {
