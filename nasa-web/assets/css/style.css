@@ -18,6 +18,7 @@ html {
     scroll-behavior: smooth;
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -333,7 +334,7 @@ h1, h2, h3, h4, h5 {
     gap: 2px;
 }
 .nav__logo-img {
-    height: 90px;
+    height: 110px;
     width: auto;
     display: block;
     object-fit: contain;
@@ -430,6 +431,7 @@ h1, h2, h3, h4, h5 {
 .hero {
     position: relative;
     min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -760,6 +762,7 @@ h1, h2, h3, h4, h5 {
     padding: 1px;
     background: radial-gradient(600px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(255, 106, 0, 0.65), transparent 40%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
@@ -1324,8 +1327,8 @@ h1, h2, h3, h4, h5 {
    ============================================= */
 .scroll-top {
     position: fixed;
-    bottom: 92px;
-    bottom: calc(92px + env(safe-area-inset-bottom, 0px));
+    bottom: 110px;
+    bottom: calc(110px + env(safe-area-inset-bottom, 0px));
     right: 21px;
     width: 40px; height: 40px;
     background: var(--color-card);
@@ -1625,6 +1628,7 @@ h1, h2, h3, h4, h5 {
     padding: 1px;
     background: radial-gradient(600px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(255, 106, 0, 0.65), transparent 40%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
@@ -2559,7 +2563,8 @@ textarea.form-control {
     .quick-contact__grid  { grid-template-columns: 1fr; }
     .branch-map-inner     { grid-template-columns: 1fr; gap: 36px; }
     .branch-map-inner--reverse { direction: ltr; }
-    .branch-map-embed     { position: static; }
+    .branch-map-embed     { position: static; order: 2; }
+    .branch-map-info      { order: 1; }
     .contact-form         { padding: 36px 28px; }
     .form-grid            { grid-template-columns: 1fr; }
     .stats-strip__item    { border-right: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle); }
@@ -2578,13 +2583,17 @@ textarea.form-control {
 
     /* Nav */
     .nav__container { padding: 0 16px; }
-    .nav__logo-img { height: 56px; }
+    .nav__logo-img { height: 72px; }
     .nav__toggle { display: flex; }
+    .navbar, .navbar.scrolled {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
     .nav__menu {
         position: fixed;
         top: var(--nav-height); left: 0; right: 0; bottom: 0;
-        background: rgba(11, 11, 15, 0.97);
-        backdrop-filter: blur(20px);
+        background: #0B0B0F;
+        z-index: 9998;
         flex-direction: column;
         justify-content: center;
         gap: 28px;
@@ -2602,11 +2611,16 @@ textarea.form-control {
     .scroll-top { right: 16px; }
 
     /* Hero */
+    .hero { min-height: 100vh; min-height: 100svh; }
+    .hero__inner { padding: calc(var(--nav-height) + 28px) 24px 60px; }
+    .hero__video { object-position: center top; }
     .hero__stats { width: 100%; justify-content: space-around; }
     .hero__stat  { padding: 0 20px; }
     .hero__scroll { display: none; }
     .hero__cta { flex-direction: column; }
     .hero__cta .btn { width: 100%; justify-content: center; }
+    .hero__subtitle { font-size: 0.98rem; margin-bottom: 32px; }
+    .hero__badge { margin-bottom: 20px; }
 
     /* Sections */
     .about-snippet__grid  { grid-template-columns: 1fr; gap: 40px; }
@@ -2677,10 +2691,15 @@ textarea.form-control {
     .container { padding: 0 16px; }
     .why-us__grid { grid-template-columns: 1fr; }
     .hero__stat-number { font-size: 1.3rem; }
+    .hero__inner { padding: calc(var(--nav-height) + 20px) 16px 48px; }
+    .hero__stats { border-radius: 12px; }
+    .hero__stat { padding: 0 14px; }
     .activity-card { padding: 16px 12px; }
     .hero__badge { font-size: 0.65rem; padding: 10px 16px; }
     .btn { padding: 12px 22px; font-size: 0.85rem; }
     .btn--lg { padding: 14px 28px; font-size: 0.9rem; }
+    .gl-inner { max-width: 100%; }
+    .gl-bar { width: clamp(140px, 75vw, 280px); }
 }
 
 /* =============================================
@@ -2691,8 +2710,8 @@ textarea.form-control {
     .container { padding: 0 12px; }
     .nav__container { padding: 0 12px; }
     .whatsapp-float { right: 12px; bottom: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); width: 50px; height: 50px; }
-    .scroll-top { right: 12px; bottom: 78px; bottom: calc(78px + env(safe-area-inset-bottom, 0px)); width: 36px; height: 36px; }
-    .nav__logo-img { height: 48px; }
+    .scroll-top { right: 12px; bottom: 110px; bottom: calc(110px + env(safe-area-inset-bottom, 0px)); width: 36px; height: 36px; }
+    .nav__logo-img { height: 60px; }
     .hero__title { font-size: clamp(1.9rem, 9vw, 2.6rem); }
     .hero__cta .btn { font-size: 0.82rem; padding: 11px 18px; }
     .section__title { font-size: clamp(1.8rem, 7vw, 2.4rem); }
@@ -2735,6 +2754,7 @@ textarea.form-control {
     object-position: center center;
     opacity: 0.8;
     filter: saturate(0.9) brightness(0.75);
+    display: block;
 }
 /* Dark gradient overlay on top of video */
 .hero__video-overlay {
@@ -3342,27 +3362,28 @@ article.activity-card { position: relative; }
    ============================================= */
 #gsap-loader {
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
+    height: 100svh;
     background: var(--color-bg);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 99999;
+    overflow: hidden;
 }
 .gl-inner {
     text-align: center;
     width: 100%;
     max-width: 340px;
-    padding: 0 24px;
+    padding: 0 clamp(16px, 6vw, 24px);
     box-sizing: border-box;
 }
 .gl-logo {
     position: relative;
-    width: clamp(200px, 82vw, 340px);
+    width: clamp(160px, 75vw, 340px);
     aspect-ratio: 16 / 9;
     margin: 0 auto 28px;
 }
@@ -3538,24 +3559,26 @@ article.activity-card { position: relative; }
 }
 .sphere-scene:active { cursor: grabbing; }
 .sphere-ring {
-    width: 200px;
-    height: 280px;
-    transform-style: preserve-3d;
     position: relative;
-    will-change: transform;
+    width: 100%;
+    height: 300px;
+    transform-style: preserve-3d;
 }
 .sphere-card {
     position: absolute;
-    width: 200px; /* Reduced from 240px */
-    height: 280px; /* Reduced from 340px */
+    left: 50%;
+    top: 50%;
+    margin-left: -87.5px;
+    margin-top: -124px;
+    width: 175px;
+    height: 248px;
     border-radius: 18px;
     overflow: hidden;
-    cursor: pointer;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    cursor: default;
     border: 1px solid rgba(255, 106, 0, 0.18);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 .sphere-card:hover {
     border-color: rgba(255, 106, 0, 0.6);
@@ -3619,34 +3642,37 @@ article.activity-card { position: relative; }
 
 @media (max-width: 768px) {
     .sphere-scene {
-        height: 480px;
-        perspective: 800px;
+        height: 420px;
+        perspective: 900px;
     }
     .sphere-ring {
-        width: 170px;
-        height: 240px;
+        height: 260px;
     }
     .sphere-card {
-        width: 170px;
-        height: 240px;
+        width: 150px;
+        height: 215px;
+        margin-left: -75px;
+        margin-top: -107.5px;
         border-radius: 12px;
     }
 }
 
 @media (max-width: 480px) {
     .sphere-scene {
-        height: 380px;
-        perspective: 650px;
+        height: 340px;
+        perspective: 700px;
     }
     .sphere-ring {
-        width: 140px;
-        height: 200px;
+        height: 220px;
     }
     .sphere-card {
-        width: 140px;
-        height: 200px;
+        width: 125px;
+        height: 180px;
+        margin-left: -62.5px;
+        margin-top: -90px;
         border-radius: 10px;
     }
+
     .fan-stage {
         height: 60vh;
         min-height: 420px;

@@ -275,8 +275,8 @@ function initScrollReveal() {
     const map = {
         'fade-up'    : { y: 44 },
         'fade-down'  : { y: -36 },
-        'fade-right' : { x: -48 },
-        'fade-left'  : { x: 48 },
+        'fade-right' : { x: window.innerWidth < 768 ? 0 : -24 },
+        'fade-left'  : { x: window.innerWidth < 768 ? 0 : 24 },
         'zoom-in'    : { scale: 0.88 },
         'flip-up'    : { rotateX: 18, transformPerspective: 900 }
     };

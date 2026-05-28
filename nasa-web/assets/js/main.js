@@ -30,8 +30,8 @@
             document.body.style.overflow = isOpen ? 'hidden' : '';
         });
 
-        /* Close on nav link click */
-        menu.querySelectorAll('.nav__link').forEach(link => {
+        /* Close on nav link or CTA click */
+        menu.querySelectorAll('.nav__link, .nav__cta').forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.remove('open');
                 toggle.classList.remove('open');
@@ -267,10 +267,16 @@
     const CHANNEL_ID = 'UCgPrRetVjfkZwHPq5CyRFLQ';
     const PLAYLIST   = 'UU' + CHANNEL_ID.slice(2);
 
+    const section = document.getElementById('reels');
+
     fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${PLAYLIST}&maxResults=20&key=${API_KEY}`)
-        .then(r => r.json())
+        .then(r => {
+            if (!r.ok) throw new Error(r.status);
+            return r.json();
+        })
         .then(data => {
-            const items = data.items || [];
+            if (!data.items || !data.items.length) throw new Error('no items');
+            const items = data.items;
             const shorts = items.filter(item => {
                 const t = (item.snippet.title || '').toLowerCase();
                 const d = (item.snippet.description || '').toLowerCase();
@@ -283,7 +289,7 @@
                 const thumb = (pick.snippet.thumbnails.maxres || pick.snippet.thumbnails.high || pick.snippet.thumbnails.medium).url;
                 slots[i].innerHTML =
                     `<a href="https://www.youtube.com/shorts/${vid}" target="_blank" rel="noopener" class="yt-thumb-card">
-                        <img src="${thumb}" alt="${title.replace(/"/g, '&quot;')}" class="yt-thumb-card__img" loading="lazy">
+                        <img src="${thumb}" alt="${title.replace(/"/g, '&quot;')}" class="yt-thumb-card__img" loading="eager">
                         <div class="yt-thumb-card__overlay">
                             <div class="yt-thumb-card__play">
                                 <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -293,7 +299,18 @@
                     </a>`;
             });
         })
-        .catch(() => slots.forEach(s => s.innerHTML = ''));
+        .catch(() => {
+            if (!section) return;
+            const grid = section.querySelector('.yt-shorts-grid');
+            if (grid) grid.innerHTML =
+                `<div style="text-align:center;padding:2rem 1rem;">
+                    <a href="https://www.youtube.com/@NassaaUthHub" target="_blank" rel="noopener"
+                       class="btn btn--primary" style="display:inline-flex;align-items:center;gap:10px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.8 5 12 5 12 5s-4.8 0-7 .1c-.4.1-1.2.1-2 .9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.8.8 1.8.8 2.2.8C6.6 19 12 19 12 19s4.8 0 7-.1c.4-.1 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zM10 15V9l5.5 3-5.5 3z"/></svg>
+                        Watch us on YouTube
+                    </a>
+                </div>`;
+        });
 })();
 
 /* =============================================

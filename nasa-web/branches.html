@@ -28,6 +28,19 @@
  rel="stylesheet">
 
  <link rel="stylesheet" href="assets/css/style.css">
+ <style>
+  @media (max-width: 680px) {
+   .branch-card[style*="flex-direction:row"],
+   .branch-card[style*="flex-direction:row-reverse"] {
+    flex-direction: column !important;
+   }
+   .branch-card[style*="flex-direction:row"] > div:first-child,
+   .branch-card[style*="flex-direction:row-reverse"] > div:first-child {
+    flex: 0 0 220px !important;
+    min-height: 220px !important;
+   }
+  }
+ </style>
 
  <script type="application/ld+json">
  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nassaauthhub.com/"},{"@type":"ListItem","position":2,"name":"Branches","item":"https://nassaauthhub.com/branches"}]}
@@ -43,7 +56,7 @@
  <div class="nav__container">
 
  <a href="index.html" class="nav__logo" aria-label="NASSAA UTH HUB Home">
- <img src="assets/images/logo.png" alt="NASSAA UTH HUB" class="nav__logo-img" width="180" height="90" loading="lazy"
+ <img src="assets/images/logo.png" alt="NASSAA UTH HUB" class="nav__logo-img" width="180" height="90" loading="eager"
  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
  <span class="nav__logo-fallback" style="display:none;flex-direction:column;gap:2px;">
  <span class="nav__logo-text">NASSAA</span>
@@ -131,67 +144,102 @@
   <p class="section__subtitle">3 open across Chennai + 2 launching soon.</p>
   </div>
 
-  <div class="branches__grid">
+  <!-- Open branches — side-by-side layout -->
+  <div style="display:flex;flex-direction:column;gap:24px;">
 
   <!-- BESANT NAGAR -->
-  <div class="branch-card" id="besant-nagar" data-anim="fade-up">
-  <div class="branch-card__num">BRANCH 01</div>
-  <div class="branch-card__icon" aria-hidden="true">🏖️</div>
-  <h3 class="branch-card__name">Besant Nagar</h3>
-  <p class="branch-card__addr">5th Avenue, Elliot's Promenade, Besant Nagar, Chennai, Tamil Nadu 600090</p>
-  <a href="tel:+919456789800" class="branch-card__phone" aria-label="Call Besant Nagar branch">+91 94567 89800</a>
-  <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
-  <a href="contact.html#besant-nagar" class="btn btn--sm btn--outline">View on Map</a>
-  <a href="games.html#besant-nagar" class="btn btn--sm btn--outline">12 Activities</a>
-  </div>
-  </div>
-
-  <!-- MARINA MALL -->
-  <div class="branch-card" id="marina-mall" data-anim="fade-up" style="--anim-delay: 0.15s">
-  <div class="branch-card__num">BRANCH 02</div>
-  <div class="branch-card__icon" aria-hidden="true">🛍️</div>
-  <h3 class="branch-card__name">Marina Mall</h3>
-  <p class="branch-card__addr">13/1A, Old Mahabalipuram Road, OMR Marina Mall, Egattur, Chennai, Tamil Nadu 603103</p>
-  <a href="tel:+919456789400" class="branch-card__phone" aria-label="Call Marina Mall branch">+91 94567 89400</a>
-  <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
-  <a href="contact.html#marina-mall" class="btn btn--sm btn--outline">View on Map</a>
-  <a href="games.html#marina-mall" class="btn btn--sm btn--outline">4 Activities</a>
-  </div>
+  <div class="branch-card" id="besant-nagar" data-anim="fade-up" style="display:flex;flex-direction:row;padding:0;gap:0;overflow:hidden;border-radius:16px;">
+   <div style="flex:0 0 48%;position:relative;min-height:300px;">
+    <img src="assets/images/branch-besant-nagar.png" alt="Nassaa Uth Hub Besant Nagar" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <span style="position:absolute;top:14px;left:14px;background:#22c55e;color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;padding:4px 12px;border-radius:20px;text-transform:uppercase;">● Open Now</span>
+   </div>
+   <div style="flex:1;padding:32px 36px;display:flex;flex-direction:column;justify-content:center;gap:10px;">
+    <div class="branch-card__num">BRANCH 01</div>
+    <h3 class="branch-card__name" style="margin:0;">Besant Nagar</h3>
+    <p class="branch-card__addr" style="margin:0;">5th Avenue, Elliot's Promenade, Besant Nagar, Chennai, Tamil Nadu 600090</p>
+    <a href="tel:+919456789800" class="branch-card__phone" aria-label="Call Besant Nagar branch">+91 94567 89800</a>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;">
+     <a href="contact.html#besant-nagar" class="btn btn--sm btn--outline">View on Map</a>
+     <a href="games.html#besant-nagar" class="btn btn--sm btn--primary">12 Activities</a>
+    </div>
+   </div>
   </div>
 
   <!-- ECR -->
-  <div class="branch-card" id="ecr" data-anim="fade-up" style="--anim-delay: 0.3s">
-  <div class="branch-card__num">BRANCH 03</div>
-  <div class="branch-card__icon" aria-hidden="true">🌊</div>
-  <h3 class="branch-card__name">ECR Branch</h3>
-  <p class="branch-card__addr">East Coast Road, Injambakkam, Chennai, Tamil Nadu 600115</p>
-  <a href="tel:+919456789200" class="branch-card__phone" aria-label="Call ECR branch">+91 94567 89200</a>
-  <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
-  <a href="contact.html#ecr" class="btn btn--sm btn--outline">View on Map</a>
-  <a href="games.html#ecr" class="btn btn--sm btn--outline">10 Activities</a>
-  </div>
+  <div class="branch-card" id="ecr" data-anim="fade-up" style="display:flex;flex-direction:row-reverse;padding:0;gap:0;overflow:hidden;border-radius:16px;">
+   <div style="flex:0 0 48%;position:relative;min-height:300px;">
+    <img src="assets/images/branch-ecr.png" alt="Nassaa Uth Hub ECR" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <span style="position:absolute;top:14px;right:14px;background:#22c55e;color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;padding:4px 12px;border-radius:20px;text-transform:uppercase;">● Open Now</span>
+   </div>
+   <div style="flex:1;padding:32px 36px;display:flex;flex-direction:column;justify-content:center;gap:10px;">
+    <div class="branch-card__num">BRANCH 02</div>
+    <h3 class="branch-card__name" style="margin:0;">ECR Branch</h3>
+    <p class="branch-card__addr" style="margin:0;">East Coast Road, Injambakkam, Chennai, Tamil Nadu 600115</p>
+    <a href="tel:+919456789200" class="branch-card__phone" aria-label="Call ECR branch">+91 94567 89200</a>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;">
+     <a href="contact.html#ecr" class="btn btn--sm btn--outline">View on Map</a>
+     <a href="games.html#ecr" class="btn btn--sm btn--primary">10 Activities</a>
+    </div>
+   </div>
   </div>
 
-  <!-- PONDICHERRY -->
-  <div class="branch-card branch-card--featured" id="pondicherry" data-anim="fade-up" style="--anim-delay: 0.45s">
-  <div class="branch-card__num" style="color: var(--color-highlight);">UPCOMING</div>
-  <div class="branch-card__icon" aria-hidden="true">🏛️</div>
-  <h3 class="branch-card__name">Pondicherry</h3>
-  <p class="branch-card__addr">🚀 Coming to the French Quarter — next-gen gaming, VR &amp; bowling taking over the Promenade!</p>
-  <div style="margin-top: 8px;">
-  <span style="display: inline-block; padding: 4px 14px; background: rgba(255, 209, 102, 0.12); color: var(--color-highlight); border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em;">Launching Soon</span>
+  <!-- MARINA MALL -->
+  <div class="branch-card" id="marina-mall" data-anim="fade-up" style="display:flex;flex-direction:row;padding:0;gap:0;overflow:hidden;border-radius:16px;">
+   <div style="flex:0 0 48%;position:relative;min-height:300px;">
+    <img src="assets/images/branch-marina-mall.PNG" alt="Nassaa Uth Hub Marina Mall OMR" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <span style="position:absolute;top:14px;left:14px;background:#22c55e;color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;padding:4px 12px;border-radius:20px;text-transform:uppercase;">● Open Now</span>
+   </div>
+   <div style="flex:1;padding:32px 36px;display:flex;flex-direction:column;justify-content:center;gap:10px;">
+    <div class="branch-card__num">BRANCH 03</div>
+    <h3 class="branch-card__name" style="margin:0;">Marina Mall</h3>
+    <p class="branch-card__addr" style="margin:0;">13/1A, Old Mahabalipuram Road, OMR Marina Mall, Egattur, Chennai, Tamil Nadu 603103</p>
+    <a href="tel:+919456789400" class="branch-card__phone" aria-label="Call Marina Mall branch">+91 94567 89400</a>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;">
+     <a href="contact.html#marina-mall" class="btn btn--sm btn--outline">View on Map</a>
+     <a href="games.html#marina-mall" class="btn btn--sm btn--primary">4 Activities</a>
+    </div>
+   </div>
   </div>
+
+  </div>
+
+  <!-- Upcoming branches -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:24px;">
+
+  <!-- PONDICHERRY -->
+  <div class="branch-card branch-card--featured" id="pondicherry" data-anim="fade-up" style="padding:0;overflow:hidden;border-radius:16px;">
+   <div style="position:relative;height:180px;background:#111;overflow:hidden;">
+    <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a1a1a 0%,#0d0d0d 100%);display:flex;align-items:center;justify-content:center;">
+     <svg viewBox="0 0 80 80" width="64" height="64" fill="none" opacity="0.15"><circle cx="40" cy="40" r="36" stroke="white" stroke-width="3"/><line x1="18" y1="18" x2="62" y2="62" stroke="white" stroke-width="3"/><line x1="62" y1="18" x2="18" y2="62" stroke="white" stroke-width="3"/></svg>
+    </div>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
+     <span style="background:rgba(255,209,102,0.15);border:1px solid rgba(255,209,102,0.4);color:#FFD166;font-size:0.72rem;font-weight:700;letter-spacing:2px;padding:5px 14px;border-radius:20px;text-transform:uppercase;">Coming Soon</span>
+     <span style="font-size:2.5rem;">🏛️</span>
+    </div>
+   </div>
+   <div style="padding:20px 24px;">
+    <div class="branch-card__num" style="color:var(--color-highlight);">UPCOMING</div>
+    <h3 class="branch-card__name">Pondicherry</h3>
+    <p class="branch-card__addr">Coming to the French Quarter — next-gen gaming, VR &amp; bowling!</p>
+   </div>
   </div>
 
   <!-- MADURAI -->
-  <div class="branch-card branch-card--featured" id="madurai" data-anim="fade-up" style="--anim-delay: 0.6s">
-  <div class="branch-card__num" style="color: var(--color-highlight);">UPCOMING</div>
-  <div class="branch-card__icon" aria-hidden="true">🏛️</div>
-  <h3 class="branch-card__name">Madurai</h3>
-  <p class="branch-card__addr">🔥 Asia's first underwater-themed gaming zone — coming to the Temple City!</p>
-  <div style="margin-top: 8px;">
-  <span style="display: inline-block; padding: 4px 14px; background: rgba(255, 209, 102, 0.12); color: var(--color-highlight); border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em;">Launching Soon</span>
-  </div>
+  <div class="branch-card branch-card--featured" id="madurai" data-anim="fade-up" style="--anim-delay:0.15s;padding:0;overflow:hidden;border-radius:16px;">
+   <div style="position:relative;height:180px;background:#111;overflow:hidden;">
+    <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a1a1a 0%,#0d0d0d 100%);display:flex;align-items:center;justify-content:center;">
+     <svg viewBox="0 0 80 80" width="64" height="64" fill="none" opacity="0.15"><circle cx="40" cy="40" r="36" stroke="white" stroke-width="3"/><line x1="18" y1="18" x2="62" y2="62" stroke="white" stroke-width="3"/><line x1="62" y1="18" x2="18" y2="62" stroke="white" stroke-width="3"/></svg>
+    </div>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
+     <span style="background:rgba(255,209,102,0.15);border:1px solid rgba(255,209,102,0.4);color:#FFD166;font-size:0.72rem;font-weight:700;letter-spacing:2px;padding:5px 14px;border-radius:20px;text-transform:uppercase;">Coming Soon</span>
+     <span style="font-size:2.5rem;">🏛️</span>
+    </div>
+   </div>
+   <div style="padding:20px 24px;">
+    <div class="branch-card__num" style="color:var(--color-highlight);">UPCOMING</div>
+    <h3 class="branch-card__name">Madurai</h3>
+    <p class="branch-card__addr">Asia's first underwater-themed gaming zone — coming to the Temple City!</p>
+   </div>
   </div>
 
   </div>
@@ -210,28 +258,45 @@
   <p class="section__subtitle">Beyond gaming — experience the wonders of our dinosaurs museum and the thrill of escape rooms.</p>
   </div>
 
-  <div class="branches__grid">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
 
   <!-- DINOSAURS MUSEUM -->
-  <div class="branch-card" data-anim="fade-up">
-  <div class="branch-card__num" style="color: var(--color-highlight);">NEW</div>
-  <div class="branch-card__icon" aria-hidden="true">🦕</div>
-  <h3 class="branch-card__name">NASSAA Dinosaurs Museum</h3>
-  <p class="branch-card__addr">191/1A2, Kalpakkam, East Coast Rd, Mahabalipuram, Tamil Nadu 603104</p>
-  <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
-  <a href="contact.html#dinosaurs-museum" class="btn btn--sm btn--outline">View on Map</a>
-  </div>
+  <div class="branch-card branch-card--featured" data-anim="fade-up" style="padding:0;overflow:hidden;border-radius:16px;">
+   <div style="position:relative;height:180px;background:#111;overflow:hidden;">
+    <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a1a1a 0%,#0d0d0d 100%);display:flex;align-items:center;justify-content:center;">
+     <svg viewBox="0 0 80 80" width="64" height="64" fill="none" opacity="0.15"><circle cx="40" cy="40" r="36" stroke="white" stroke-width="3"/><line x1="18" y1="18" x2="62" y2="62" stroke="white" stroke-width="3"/><line x1="62" y1="18" x2="18" y2="62" stroke="white" stroke-width="3"/></svg>
+    </div>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
+     <span style="background:rgba(255,209,102,0.15);border:1px solid rgba(255,209,102,0.4);color:#FFD166;font-size:0.72rem;font-weight:700;letter-spacing:2px;padding:5px 14px;border-radius:20px;text-transform:uppercase;">Coming Soon</span>
+     <span style="font-size:2.5rem;">🦕</span>
+    </div>
+   </div>
+   <div style="padding:20px 24px;">
+    <div class="branch-card__num" style="color:var(--color-highlight);">NEW</div>
+    <h3 class="branch-card__name">NASSAA Dinosaurs Museum</h3>
+    <p class="branch-card__addr">191/1A2, Kalpakkam, East Coast Rd, Mahabalipuram, Tamil Nadu 603104</p>
+    <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;">
+     <a href="contact.html#dinosaurs-museum" class="btn btn--sm btn--outline">View on Map</a>
+    </div>
+   </div>
   </div>
 
   <!-- ESCAPE ROOM -->
-  <div class="branch-card branch-card--featured" data-anim="fade-up" style="--anim-delay: 0.15s">
-  <div class="branch-card__num" style="color: var(--color-highlight);">UPCOMING</div>
-  <div class="branch-card__icon" aria-hidden="true">🗝️</div>
-  <h3 class="branch-card__name">Escape Room</h3>
-  <p class="branch-card__addr">Coming soon at Besant Nagar. Get ready for an immersive puzzle experience!</p>
-  <div style="margin-top: 8px;">
-  <span style="display: inline-block; padding: 4px 14px; background: rgba(255, 209, 102, 0.12); color: var(--color-highlight); border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em;">Launching Soon</span>
-  </div>
+  <div class="branch-card branch-card--featured" data-anim="fade-up" style="--anim-delay:0.15s;padding:0;overflow:hidden;border-radius:16px;">
+   <div style="position:relative;height:180px;background:#111;overflow:hidden;">
+    <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a1a1a 0%,#0d0d0d 100%);display:flex;align-items:center;justify-content:center;">
+     <svg viewBox="0 0 80 80" width="64" height="64" fill="none" opacity="0.15"><circle cx="40" cy="40" r="36" stroke="white" stroke-width="3"/><line x1="18" y1="18" x2="62" y2="62" stroke="white" stroke-width="3"/><line x1="62" y1="18" x2="18" y2="62" stroke="white" stroke-width="3"/></svg>
+    </div>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
+     <span style="background:rgba(255,209,102,0.15);border:1px solid rgba(255,209,102,0.4);color:#FFD166;font-size:0.72rem;font-weight:700;letter-spacing:2px;padding:5px 14px;border-radius:20px;text-transform:uppercase;">Coming Soon</span>
+     <span style="font-size:2.5rem;">🗝️</span>
+    </div>
+   </div>
+   <div style="padding:20px 24px;">
+    <div class="branch-card__num" style="color:var(--color-highlight);">UPCOMING</div>
+    <h3 class="branch-card__name">Escape Room</h3>
+    <p class="branch-card__addr">Coming soon at Besant Nagar. Get ready for an immersive puzzle experience!</p>
+   </div>
   </div>
 
   </div>
@@ -331,7 +396,7 @@
 
  <div class="footer__brand">
  <a href="index.html" class="footer__logo-wrap" aria-label="NASSAA UTH HUB">
- <img src="assets/images/logo.png" alt="NASSAA UTH HUB" class="footer__logo-img" width="180" height="90" loading="lazy"
+ <img src="assets/images/logo.png" alt="NASSAA UTH HUB" class="footer__logo-img" width="180" height="90" loading="eager"
  onerror="this.style.display='none';this.nextElementSibling.style.display='block';this.nextElementSibling.nextElementSibling.style.display='block'">
  <span class="footer__logo-text" style="display:none;">NASSAA</span>
  <span class="footer__logo-sub" style="display:none;">UTH HUB</span>
@@ -401,8 +466,41 @@
  </footer>
 
  <!-- Floating WhatsApp -->
- <a href="https://wa.me/919789029700" target="_blank" rel="noopener noreferrer" class="whatsapp-float"
- aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+ <script>
+  var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?10518';
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = url;
+  var options = {
+   "enabled": true,
+   "chatButtonSetting": {
+    "backgroundColor": "#00e785",
+    "ctaText": "Chat with us",
+    "borderRadius": "25",
+    "marginLeft": "0",
+    "marginRight": "20",
+    "marginBottom": "20",
+    "ctaIconWATI": true,
+    "position": "right"
+   },
+   "brandSetting": {
+    "brandName": "Wati",
+    "brandSubTitle": "undefined",
+    "brandImg": "https://www.wati.io/wp-content/uploads/2023/04/Wati-logo.svg",
+    "welcomeText": "Hi there!\nReady to play at Nassaa?",
+    "messageText": "Hello, %0A Hi, I want to know about bookings, games, pricing, and offers at Nassaa Uth Hub.",
+    "backgroundColor": "#00e785",
+    "ctaText": "Chat with us",
+    "borderRadius": "25",
+    "autoShow": false,
+    "phoneNumber": "919789029700"
+   }
+  };
+  s.onload = function() { CreateWhatsappChatWidget(options); };
+  var x = document.getElementsByTagName('script')[0];
+  x.parentNode.insertBefore(s, x);
+ </script>
 
  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">&#8593;</button>
 
