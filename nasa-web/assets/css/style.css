@@ -2595,7 +2595,7 @@ textarea.form-control {
         background: #0B0B0F;
         z-index: 9998;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 28px;
         transform: translateX(100%);
         transition: transform var(--transition-slow);
@@ -2657,7 +2657,8 @@ textarea.form-control {
     .game-card { padding: 26px 22px; }
     .activity-card { padding: 22px 18px; }
 
-    .hero { min-height: auto; padding: 110px 0 60px; }
+    .hero { min-height: 100svh; align-items: flex-start; }
+    .hero__inner { padding-top: calc(var(--nav-height) + 16px); }
     .hero__title { font-size: clamp(2.6rem, 8vw, 3.5rem); }
     .hero__subtitle { font-size: 1rem; }
     .hero__stats { width: 100%; padding: 16px 0; }
@@ -2667,6 +2668,7 @@ textarea.form-control {
     .section__title { font-size: clamp(2.2rem, 6vw, 3.2rem); }
     .section__subtitle { font-size: 0.95rem; }
 
+    .page-hero { padding: calc(var(--nav-height) + 24px) 0 48px; }
     .page-hero__title { font-size: clamp(2rem, 8vw, 3rem); }
     .page-hero__meta { flex-direction: column; gap: 8px; }
 
@@ -2692,6 +2694,7 @@ textarea.form-control {
     .why-us__grid { grid-template-columns: 1fr; }
     .hero__stat-number { font-size: 1.3rem; }
     .hero__inner { padding: calc(var(--nav-height) + 20px) 16px 48px; }
+    .page-hero { padding: calc(var(--nav-height) + 16px) 0 40px; }
     .hero__stats { border-radius: 12px; }
     .hero__stat { padding: 0 14px; }
     .activity-card { padding: 16px 12px; }
