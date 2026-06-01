@@ -1,0 +1,5 @@
+name = "nassaa-web"
+compatibility_date = "2026-06-01"
+
+[assets]
+directory = "./nasa-web"
