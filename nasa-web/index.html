@@ -127,7 +127,7 @@
  <section class="hero hero--video" id="hero" aria-label="Hero">
 
  <div class="hero__video-wrap" aria-hidden="true">
- <video class="hero__video" autoplay muted loop playsinline preload="auto">
+ <video class="hero__video" id="heroBgVideo" autoplay muted loop playsinline webkit-playsinline preload="metadata">
   <source src="assets/videos/hero-bg.mp4" type="video/mp4">
  </video>
  <div class="hero__video-overlay"></div>
@@ -667,6 +667,25 @@
  <script src="assets/js/ScrollTrigger.min.js"></script>
  <script src="assets/js/main.js"></script>
  <script src="assets/js/gsap-animations.js"></script>
+ <script>
+  (function() {
+   var v = document.getElementById('heroBgVideo');
+   if (!v) return;
+   var tryPlay = function() {
+    var p = v.play();
+    if (p !== undefined) {
+     p.catch(function() {
+      v.muted = true;
+      v.play().catch(function() {
+       v.parentElement.style.display = 'none';
+      });
+     });
+    }
+   };
+   v.addEventListener('canplay', tryPlay, { once: true });
+   document.addEventListener('touchstart', function() { tryPlay(); }, { once: true });
+  })();
+ </script>
 </body>
 
 </html>
