@@ -2613,7 +2613,7 @@ textarea.form-control {
 
     /* Hero */
     .hero { min-height: 100svh; align-items: flex-start; }
-    .hero__inner { padding: calc(var(--nav-height) + 24px) 20px 48px; }
+    .hero__inner { padding: calc(var(--nav-height) + 48px) 20px 48px; }
     .hero__video { object-position: center top; }
     .hero__badge { margin-bottom: 16px; font-size: 0.7rem; padding: 10px 16px; }
     .hero__title { font-size: clamp(2.8rem, 10vw, 4rem); margin-bottom: 20px; }
