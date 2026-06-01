@@ -312,8 +312,8 @@ h1, h2, h3, h4, h5 {
 
 .navbar.scrolled {
     background: #0B0B0F;
-    backdrop-filter: blur(28px);
-    -webkit-backdrop-filter: blur(28px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     border-bottom-color: var(--color-border);
     box-shadow: 0 4px 32px rgba(0, 0, 0, 0.6);
 }
