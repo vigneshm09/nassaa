@@ -14,38 +14,6 @@ gsap.registerPlugin(ScrollTrigger);
     document.querySelectorAll('[data-anim]').forEach(el => {
         el.style.transition = 'none';
     });
-
-    /* Freeze hero elements before CSS fadeUp fires */
-    const heroTargets = [
-        '.hero__title', '.hero__subtitle',
-        '.hero__cta', '.hero__stats', '.hero__scroll'
-    ];
-    heroTargets.forEach(sel => {
-        document.querySelectorAll(sel).forEach(el => {
-            el.style.animation = 'none';
-            el.style.opacity   = '0';
-            el.style.transform = 'translateY(0)';
-        });
-    });
-
-    /* Always keep badge visible — never hide it */
-    document.querySelectorAll('.hero__badge').forEach(el => {
-        el.style.opacity   = '';
-        el.style.transform = '';
-        el.style.animation = '';
-    });
-
-    /* Freeze inner page-hero elements before CSS fadeUp fires */
-    const pageHeroTargets = [
-        '.page-hero__tag', '.page-hero__title',
-        '.page-hero__subtitle', '.page-hero__meta-item'
-    ];
-    pageHeroTargets.forEach(sel => {
-        document.querySelectorAll(sel).forEach(el => {
-            el.style.animation = 'none';
-            el.style.opacity   = '0';
-        });
-    });
 })();
 
 /* =============================================
@@ -218,6 +186,9 @@ function startHeroAnimation() {
     const scroll   = document.querySelector('.hero__scroll');
 
     if (!title) return; /* Not the homepage */
+
+    /* Pre-hide elements that have no CSS opacity:0 initial state */
+    gsap.set([subtitle, cta, stats, scroll].filter(Boolean), { opacity: 0 });
 
     const tl = gsap.timeline({ delay: 0.05 });
     if (title) {
@@ -588,7 +559,7 @@ function initGlowTracking() {
     initStarsFill();
 
     if (isHome) {
-        initLoader(); /* handles startHeroAnimation internally */
+        startHeroAnimation();
     } else {
         initPageHero();
     }
