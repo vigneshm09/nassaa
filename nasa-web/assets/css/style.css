@@ -491,7 +491,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero__badge {
-    display: inline-flex;
+    display: inline-flex !important;
+    opacity: 1 !important;
+    transform: none !important;
     align-items: center;
     gap: 10px;
     font-family: var(--font-accent);

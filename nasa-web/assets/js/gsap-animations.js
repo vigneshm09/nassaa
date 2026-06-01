@@ -28,6 +28,13 @@ gsap.registerPlugin(ScrollTrigger);
         });
     });
 
+    /* Always keep badge visible — never hide it */
+    document.querySelectorAll('.hero__badge').forEach(el => {
+        el.style.opacity   = '';
+        el.style.transform = '';
+        el.style.animation = '';
+    });
+
     /* Freeze inner page-hero elements before CSS fadeUp fires */
     const pageHeroTargets = [
         '.page-hero__tag', '.page-hero__title',
