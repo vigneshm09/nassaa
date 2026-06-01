@@ -2659,7 +2659,7 @@ textarea.form-control {
 
     .hero { min-height: 100svh; align-items: flex-start; }
     .hero__inner { padding-top: calc(var(--nav-height) + 16px); }
-    .hero__title { font-size: clamp(2.6rem, 8vw, 3.5rem); }
+    .hero__title { font-size: clamp(3.4rem, 11vw, 5rem); }
     .hero__subtitle { font-size: 1rem; }
     .hero__stats { width: 100%; padding: 16px 0; }
     .hero__stat { padding: 0 18px; }
@@ -2715,7 +2715,7 @@ textarea.form-control {
     .whatsapp-float { right: 12px; bottom: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); width: 50px; height: 50px; }
     .scroll-top { right: 12px; bottom: 110px; bottom: calc(110px + env(safe-area-inset-bottom, 0px)); width: 36px; height: 36px; }
     .nav__logo-img { height: 60px; }
-    .hero__title { font-size: clamp(1.9rem, 9vw, 2.6rem); }
+    .hero__title { font-size: clamp(3rem, 10vw, 3.4rem); }
     .hero__cta .btn { font-size: 0.82rem; padding: 11px 18px; }
     .section__title { font-size: clamp(1.8rem, 7vw, 2.4rem); }
     .hero__stats { gap: 0; }
