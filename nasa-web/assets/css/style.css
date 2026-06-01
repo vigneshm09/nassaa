@@ -2658,7 +2658,7 @@ textarea.form-control {
     .activity-card { padding: 22px 18px; }
 
     .hero { min-height: 100svh; align-items: flex-start; }
-    .hero__inner { padding-top: calc(var(--nav-height) + 16px); }
+    .hero__inner { padding-top: calc(var(--nav-height) + 32px); }
     .hero__title { font-size: clamp(4.5rem, 13vw, 6rem); }
     .hero__subtitle { font-size: 1rem; }
     .hero__stats { width: 100%; padding: 16px 0; }
@@ -2693,7 +2693,7 @@ textarea.form-control {
     .container { padding: 0 16px; }
     .why-us__grid { grid-template-columns: 1fr; }
     .hero__stat-number { font-size: 1.3rem; }
-    .hero__inner { padding: calc(var(--nav-height) + 20px) 16px 48px; }
+    .hero__inner { padding: calc(var(--nav-height) + 32px) 16px 48px; }
     .page-hero { padding: calc(var(--nav-height) + 16px) 0 40px; }
     .hero__stats { border-radius: 12px; }
     .hero__stat { padding: 0 14px; }

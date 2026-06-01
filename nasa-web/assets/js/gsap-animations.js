@@ -17,7 +17,7 @@ gsap.registerPlugin(ScrollTrigger);
 
     /* Freeze hero elements before CSS fadeUp fires */
     const heroTargets = [
-        '.hero__badge', '.hero__title', '.hero__subtitle',
+        '.hero__title', '.hero__subtitle',
         '.hero__cta', '.hero__stats', '.hero__scroll'
     ];
     heroTargets.forEach(sel => {
@@ -210,11 +210,9 @@ function startHeroAnimation() {
     const stats    = document.querySelector('.hero__stats');
     const scroll   = document.querySelector('.hero__scroll');
 
-    if (!badge && !title) return; /* Not the homepage */
+    if (!title) return; /* Not the homepage */
 
     const tl = gsap.timeline({ delay: 0.05 });
-
-    if (badge)    tl.fromTo(badge,    { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: 0.65, ease: 'power3.out' });
     if (title) {
         splitTextPreserveHTML(title);
         const words = title.querySelectorAll('.split-word');
