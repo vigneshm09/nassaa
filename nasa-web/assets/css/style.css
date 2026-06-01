@@ -505,7 +505,6 @@ h1, h2, h3, h4, h5 {
     padding: 12px 22px;
     border-radius: var(--radius-full);
     margin-bottom: 32px;
-    animation: fadeDown 0.7s ease both;
 }
 .hero__badge-dot {
     width: 7px; height: 7px;
