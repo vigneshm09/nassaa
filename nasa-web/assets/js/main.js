@@ -15,9 +15,19 @@
     const menu     = document.getElementById('navMenu');
     if (!navbar) return;
 
-    /* Scroll-triggered glass effect */
+    /* Scroll-triggered glass effect + hero clip to prevent bleed above nav */
+    const hero = document.querySelector('.hero');
+    const navH = navbar.offsetHeight || 72;
+
     const onScroll = () => {
-        navbar.classList.toggle('scrolled', window.scrollY > 50);
+        const sy = window.scrollY;
+        navbar.classList.toggle('scrolled', sy > 50);
+
+        /* Clip hero so its content never appears behind or above the navbar */
+        if (hero) {
+            const clip = Math.min(sy + navH, hero.offsetHeight);
+            hero.style.clipPath = 'inset(' + clip + 'px 0 0 0)';
+        }
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll(); // Run once on load
