@@ -28,19 +28,6 @@
  rel="stylesheet">
 
  <link rel="stylesheet" href="assets/css/style.css">
- <style>
-  @media (max-width: 680px) {
-   .branch-card[style*="flex-direction:row"],
-   .branch-card[style*="flex-direction:row-reverse"] {
-    flex-direction: column !important;
-   }
-   .branch-card[style*="flex-direction:row"] > div:first-child,
-   .branch-card[style*="flex-direction:row-reverse"] > div:first-child {
-    flex: 0 0 220px !important;
-    min-height: 220px !important;
-   }
-  }
- </style>
 
  <script type="application/ld+json">
  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nassaauthhub.com/"},{"@type":"ListItem","position":2,"name":"Branches","item":"https://nassaauthhub.com/branches"}]}
@@ -144,19 +131,21 @@
   <p class="section__subtitle">3 open across Chennai + 2 launching soon.</p>
   </div>
 
-  <!-- Open branches — side-by-side layout -->
-  <div style="display:flex;flex-direction:column;gap:24px;">
+  <!-- Open branches — stacked card layout -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
 
   <!-- BESANT NAGAR -->
-  <div class="branch-card" id="besant-nagar" data-anim="fade-up" style="display:flex;flex-direction:row;padding:0;gap:0;overflow:hidden;border-radius:16px;">
-   <div style="flex:0 0 48%;position:relative;min-height:300px;">
+  <div class="branch-card" id="besant-nagar" data-anim="fade-up" style="padding:0;overflow:hidden;border-radius:16px;">
+   <div style="position:relative;height:220px;overflow:hidden;">
     <img src="assets/images/branch-besant-nagar.png" alt="Nassaa Uth Hub Besant Nagar" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
-    <span style="position:absolute;top:14px;left:14px;background:#22c55e;color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;padding:4px 12px;border-radius:20px;text-transform:uppercase;">● Open Now</span>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:14px;">
+     <span style="background:#22c55e;color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;padding:4px 12px;border-radius:20px;text-transform:uppercase;">● Open Now</span>
+    </div>
    </div>
-   <div style="flex:1;padding:32px 36px;display:flex;flex-direction:column;justify-content:center;gap:10px;">
+   <div style="padding:20px 24px;display:flex;flex-direction:column;gap:8px;">
     <div class="branch-card__num">BRANCH 01</div>
-    <h3 class="branch-card__name" style="margin:0;">Besant Nagar</h3>
-    <p class="branch-card__addr" style="margin:0;">5th Avenue, Elliot's Promenade, Besant Nagar, Chennai, Tamil Nadu 600090</p>
+    <h3 class="branch-card__name">Besant Nagar</h3>
+    <p class="branch-card__addr">5th Avenue, Elliot's Promenade, Besant Nagar, Chennai, Tamil Nadu 600090</p>
     <a href="tel:+919456789800" class="branch-card__phone" aria-label="Call Besant Nagar branch">+91 94567 89800</a>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;">
      <a href="contact.html#besant-nagar" class="btn btn--sm btn--outline">View on Map</a>
@@ -166,15 +155,17 @@
   </div>
 
   <!-- ECR -->
-  <div class="branch-card" id="ecr" data-anim="fade-up" style="display:flex;flex-direction:row-reverse;padding:0;gap:0;overflow:hidden;border-radius:16px;">
-   <div style="flex:0 0 48%;position:relative;min-height:300px;">
+  <div class="branch-card" id="ecr" data-anim="fade-up" style="--anim-delay:0.08s;padding:0;overflow:hidden;border-radius:16px;">
+   <div style="position:relative;height:220px;overflow:hidden;">
     <img src="assets/images/branch-ecr.png" alt="Nassaa Uth Hub ECR" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
-    <span style="position:absolute;top:14px;right:14px;background:#22c55e;color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;padding:4px 12px;border-radius:20px;text-transform:uppercase;">● Open Now</span>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:14px;">
+     <span style="background:#22c55e;color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;padding:4px 12px;border-radius:20px;text-transform:uppercase;">● Open Now</span>
+    </div>
    </div>
-   <div style="flex:1;padding:32px 36px;display:flex;flex-direction:column;justify-content:center;gap:10px;">
+   <div style="padding:20px 24px;display:flex;flex-direction:column;gap:8px;">
     <div class="branch-card__num">BRANCH 02</div>
-    <h3 class="branch-card__name" style="margin:0;">ECR Branch</h3>
-    <p class="branch-card__addr" style="margin:0;">East Coast Road, Injambakkam, Chennai, Tamil Nadu 600115</p>
+    <h3 class="branch-card__name">ECR Branch</h3>
+    <p class="branch-card__addr">East Coast Road, Injambakkam, Chennai, Tamil Nadu 600115</p>
     <a href="tel:+919456789200" class="branch-card__phone" aria-label="Call ECR branch">+91 94567 89200</a>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;">
      <a href="contact.html#ecr" class="btn btn--sm btn--outline">View on Map</a>
@@ -184,15 +175,17 @@
   </div>
 
   <!-- MARINA MALL -->
-  <div class="branch-card" id="marina-mall" data-anim="fade-up" style="display:flex;flex-direction:row;padding:0;gap:0;overflow:hidden;border-radius:16px;">
-   <div style="flex:0 0 48%;position:relative;min-height:300px;">
+  <div class="branch-card" id="marina-mall" data-anim="fade-up" style="--anim-delay:0.16s;padding:0;overflow:hidden;border-radius:16px;">
+   <div style="position:relative;height:220px;overflow:hidden;">
     <img src="assets/images/branch-marina-mall.PNG" alt="Nassaa Uth Hub Marina Mall OMR" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
-    <span style="position:absolute;top:14px;left:14px;background:#22c55e;color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;padding:4px 12px;border-radius:20px;text-transform:uppercase;">● Open Now</span>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:14px;">
+     <span style="background:#22c55e;color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;padding:4px 12px;border-radius:20px;text-transform:uppercase;">● Open Now</span>
+    </div>
    </div>
-   <div style="flex:1;padding:32px 36px;display:flex;flex-direction:column;justify-content:center;gap:10px;">
+   <div style="padding:20px 24px;display:flex;flex-direction:column;gap:8px;">
     <div class="branch-card__num">BRANCH 03</div>
-    <h3 class="branch-card__name" style="margin:0;">Marina Mall</h3>
-    <p class="branch-card__addr" style="margin:0;">13/1A, Old Mahabalipuram Road, OMR Marina Mall, Egattur, Chennai, Tamil Nadu 603103</p>
+    <h3 class="branch-card__name">Marina Mall</h3>
+    <p class="branch-card__addr">13/1A, Old Mahabalipuram Road, OMR Marina Mall, Egattur, Chennai, Tamil Nadu 603103</p>
     <a href="tel:+919456789400" class="branch-card__phone" aria-label="Call Marina Mall branch">+91 94567 89400</a>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;">
      <a href="contact.html#marina-mall" class="btn btn--sm btn--outline">View on Map</a>
