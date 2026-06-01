@@ -64,6 +64,9 @@
 
 <body>
 
+ <!-- Safe-area cover: blocks content from showing in iPhone notch/Dynamic Island gap -->
+ <div style="position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top,0px);background:#0B0B0F;z-index:99999;pointer-events:none;" aria-hidden="true"></div>
+
  <!-- GSAP Page Loader -->
  <div id="gsap-loader" aria-hidden="true">
   <div class="gl-inner">
