@@ -2614,9 +2614,13 @@ textarea.form-control {
     .whatsapp-float { right: 16px; }
     .scroll-top { right: 16px; }
 
-    /* Hero */
-    .hero { min-height: 100svh; align-items: flex-start; }
-    .hero__inner { padding: calc(var(--nav-height) + 48px) 20px 48px; }
+    /* Hero — starts physically below navbar so content never scrolls behind it */
+    .hero {
+        margin-top: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
+        min-height: calc(100svh - var(--nav-height) - env(safe-area-inset-top, 0px));
+        align-items: flex-start;
+    }
+    .hero__inner { padding: 40px 20px 48px; }
     .hero__video { object-position: center top; }
     .hero__badge { margin-bottom: 16px; font-size: 0.7rem; padding: 10px 16px; }
     .hero__title { font-size: clamp(2.8rem, 10vw, 4rem); margin-bottom: 20px; }
