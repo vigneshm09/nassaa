@@ -2623,10 +2623,10 @@ textarea.form-control {
 
     /* Hero */
     .hero { min-height: 100svh; align-items: flex-start; }
-    .hero__inner { padding: calc(var(--nav-height) + env(safe-area-inset-top, 0px) + 100px) 20px 48px; }
+    .hero__inner { padding: calc(var(--nav-height) + env(safe-area-inset-top, 0px) + 80px) 20px 48px; }
     .hero__video { object-position: center top; }
     .hero__badge-wrap { top: calc(var(--nav-height) + env(safe-area-inset-top, 0px) + 12px); }
-    .hero__badge { font-size: 0.55rem; padding: 8px 14px; }
+    .hero__badge { font-size: 0.55rem; padding: 8px 14px; white-space: nowrap; }
     .hero__title { font-size: clamp(3.8rem, 15vw, 6rem); margin-bottom: 20px; }
     .hero__subtitle { font-size: 0.95rem; margin-bottom: 28px; }
     .hero__cta { flex-direction: column; gap: 10px; margin-bottom: 36px; }
