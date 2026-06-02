@@ -335,7 +335,7 @@ h1, h2, h3, h4, h5 {
     gap: 2px;
 }
 .nav__logo-img {
-    height: 140px;
+    height: 110px;
     width: auto;
     display: block;
     object-fit: contain;
