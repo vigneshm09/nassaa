@@ -2698,7 +2698,7 @@ textarea.form-control {
 @media (max-width: 480px) {
     :root { --section-pad: 48px; }
 
-    .container { padding: 0 16px; }
+    .container:not(.hero__inner) { padding: 0 16px; }
     .why-us__grid { grid-template-columns: 1fr; }
     .hero__title { font-size: clamp(2.4rem, 10vw, 3.2rem); }
     .hero__stat-number { font-size: 1.2rem; }
