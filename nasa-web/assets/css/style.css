@@ -2626,8 +2626,8 @@ textarea.form-control {
     .hero__inner { padding: calc(var(--nav-height) + env(safe-area-inset-top, 0px) + 100px) 20px 48px; }
     .hero__video { object-position: center top; }
     .hero__badge-wrap { top: calc(var(--nav-height) + env(safe-area-inset-top, 0px) + 12px); }
-    .hero__badge { font-size: 0.7rem; padding: 10px 16px; }
-    .hero__title { font-size: clamp(3.4rem, 13vw, 5rem); margin-bottom: 20px; }
+    .hero__badge { font-size: 0.55rem; padding: 8px 14px; }
+    .hero__title { font-size: clamp(3.8rem, 15vw, 6rem); margin-bottom: 20px; }
     .hero__subtitle { font-size: 0.95rem; margin-bottom: 28px; }
     .hero__cta { flex-direction: column; gap: 10px; margin-bottom: 36px; }
     .hero__cta .btn { width: 100%; justify-content: center; }
