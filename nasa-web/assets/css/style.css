@@ -1736,7 +1736,7 @@ h1, h2, h3, h4, h5 {
 .games-comparison th {
     background: var(--color-card);
     padding: 16px 20px;
-    text-align: left;
+    text-align: center;
     font-family: var(--font-body);
     font-size: 0.82rem;
     font-weight: 700;
@@ -1746,22 +1746,26 @@ h1, h2, h3, h4, h5 {
     border-bottom: 1px solid var(--color-border-subtle);
     white-space: nowrap;
 }
-.games-comparison th:first-child { border-radius: var(--radius-lg) 0 0 0; }
-.games-comparison th:last-child  { border-radius: 0 var(--radius-lg) 0 0; }
+.games-comparison th:first-child {
+    border-radius: var(--radius-lg) 0 0 0;
+    text-align: left;
+}
+.games-comparison th:last-child { border-radius: 0 var(--radius-lg) 0 0; }
 .games-comparison td {
     padding: 14px 20px;
     font-size: 0.875rem;
     color: var(--color-gray-300);
     border-bottom: 1px solid rgba(255,255,255,0.04);
+    text-align: center;
+    vertical-align: middle;
 }
 .games-comparison tr:last-child td { border-bottom: none; }
 .games-comparison tr:hover td { background: rgba(255,255,255,0.02); }
 .games-comparison td:first-child {
     font-weight: 600;
     color: var(--color-white);
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    text-align: left;
+    vertical-align: middle;
 }
 .check { color: var(--color-primary); font-size: 1.1rem; }
 .dash  { color: var(--color-gray-700); font-size: 1.1rem; }
@@ -2623,8 +2627,8 @@ textarea.form-control {
     .hero__subtitle { font-size: 0.95rem; margin-bottom: 28px; }
     .hero__cta { flex-direction: column; gap: 10px; margin-bottom: 36px; }
     .hero__cta .btn { width: 100%; justify-content: center; }
-    .hero__stats { width: 100%; justify-content: space-around; padding: 14px 0; }
-    .hero__stat  { padding: 0 12px; }
+    .hero__stats { width: 100%; justify-content: space-between; padding: 14px 0; }
+    .hero__stat  { flex: 1; padding: 0 8px; min-width: 0; }
     .hero__scroll { display: none; }
 
     /* Sections */
@@ -2693,7 +2697,7 @@ textarea.form-control {
     .container:not(.hero__inner) { padding: 0 16px; }
     .why-us__grid { grid-template-columns: 1fr; }
     .hero__title { font-size: clamp(3.5rem, 14vw, 5.5rem); }
-    .hero__stat-number { font-size: 1.2rem; }
+    .hero__stat-number { font-size: 1.1rem; word-break: keep-all; }
     .page-hero { padding: calc(var(--nav-height) + 16px) 0 40px; }
     .hero__stats { border-radius: 12px; }
     .activity-card { padding: 16px 12px; }
