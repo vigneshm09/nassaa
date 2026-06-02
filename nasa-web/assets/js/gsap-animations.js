@@ -559,7 +559,7 @@ function initGlowTracking() {
     initStarsFill();
 
     if (isHome) {
-        startHeroAnimation();
+        initLoader(); /* handles startHeroAnimation internally */
     } else {
         initPageHero();
     }

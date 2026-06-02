@@ -67,6 +67,19 @@
  <!-- Safe-area cover: blocks content from showing in iPhone notch/Dynamic Island gap -->
  <div style="position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top,0px);background:#0B0B0F;z-index:99999;pointer-events:none;" aria-hidden="true"></div>
 
+ <!-- GSAP Page Loader -->
+ <div id="gsap-loader" aria-hidden="true">
+  <div class="gl-inner">
+   <div class="gl-logo">
+    <div class="gl-logo__part gl-logo__part--tl"><img src="assets/images/logo.png" alt="" loading="eager" fetchpriority="high"></div>
+    <div class="gl-logo__part gl-logo__part--tr"><img src="assets/images/logo.png" alt="" loading="eager" fetchpriority="high"></div>
+    <div class="gl-logo__part gl-logo__part--bl"><img src="assets/images/logo.png" alt="" loading="eager" fetchpriority="high"></div>
+    <div class="gl-logo__part gl-logo__part--br"><img src="assets/images/logo.png" alt="" loading="eager" fetchpriority="high"></div>
+   </div>
+   <div class="gl-bar"><div class="gl-fill"></div></div>
+   <p class="gl-label">Loading Experience 🚀</p>
+  </div>
+ </div>
 
  <!-- =============================================
  NAVIGATION
