@@ -2667,7 +2667,7 @@ textarea.form-control {
     .activity-card { padding: 22px 18px; }
 
     .hero__title { font-size: clamp(3.5rem, 14vw, 6rem); }
-    .hero__stat-number { font-size: 1.3rem; }
+    .hero__stat-number { font-size: 1.5rem; }
 
     .section__title { font-size: clamp(2.2rem, 6vw, 3.2rem); }
     .section__subtitle { font-size: 0.95rem; }
@@ -2697,7 +2697,8 @@ textarea.form-control {
     .container:not(.hero__inner) { padding: 0 16px; }
     .why-us__grid { grid-template-columns: 1fr; }
     .hero__title { font-size: clamp(3.5rem, 14vw, 5.5rem); }
-    .hero__stat-number { font-size: 1.1rem; word-break: keep-all; }
+    .hero__stat-number { font-size: clamp(1.4rem, 7vw, 1.8rem); word-break: keep-all; }
+    .hero__stat-label { font-size: 0.55rem; letter-spacing: 0.04em; white-space: nowrap; }
     .page-hero { padding: calc(var(--nav-height) + 16px) 0 40px; }
     .hero__stats { border-radius: 12px; }
     .activity-card { padding: 16px 12px; }
@@ -2721,8 +2722,10 @@ textarea.form-control {
     .hero__badge { font-size: 0.5rem; padding: 7px 10px; }
     .hero__cta .btn { font-size: 0.82rem; padding: 11px 18px; }
     .section__title { font-size: clamp(1.8rem, 7vw, 2.4rem); }
-    .hero__stats { gap: 0; }
-    .hero__stat { padding: 0 10px; }
+    .hero__stats { gap: 0; align-items: stretch; }
+    .hero__stat { padding: 0 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; }
+    .hero__stat-number { font-size: clamp(1.4rem, 7vw, 1.8rem); }
+    .hero__stat-label { font-size: 0.48rem; letter-spacing: 0.02em; white-space: nowrap; }
 }
 
 /* =============================================
@@ -2915,12 +2918,7 @@ textarea.form-control {
     animation: glitch 0.5s steps(2) 1;
 }
 
-/* Hero stat numbers in accent font */
-.hero__stat-number {
-    font-family: var(--font-accent);
-    font-size: 1.8rem;
-    font-weight: 800;
-}
+/* Hero stat numbers in accent font — merged into main rule above */
 
 /* Branch card enhanced */
 .branch-card--featured {
